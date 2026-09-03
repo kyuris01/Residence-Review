@@ -1,0 +1,2890 @@
+{
+  "generatedAt": "2026-09-03T13:14:21+09:00",
+  "isMock": true,
+  "region": {
+    "sido": "전라남도",
+    "sigungu": "나주시",
+    "dong": "빛가람동",
+    "sigungu_code": "46170",
+    "bjd_code": "",
+    "center": {
+      "lat": 35.0208,
+      "lng": 126.79
+    },
+    "zoom": 14
+  },
+  "aspects": [
+    {
+      "key": "parking",
+      "label": "주차",
+      "unit": "대/세대",
+      "higher_is_better": true
+    },
+    {
+      "key": "fee",
+      "label": "관리비",
+      "unit": "원/㎡",
+      "higher_is_better": false
+    },
+    {
+      "key": "security",
+      "label": "보안·관리",
+      "unit": "세대/경비원",
+      "higher_is_better": false
+    },
+    {
+      "key": "scale",
+      "label": "규모",
+      "unit": "세대",
+      "higher_is_better": true
+    },
+    {
+      "key": "age",
+      "label": "노후도",
+      "unit": "년",
+      "higher_is_better": true
+    },
+    {
+      "key": "amenity",
+      "label": "교통·생활편의",
+      "unit": "개",
+      "higher_is_better": true
+    }
+  ],
+  "minEvidence": 3,
+  "disclaimer": "AI가 공개된 후기를 요약한 것으로 사실과 다를 수 있으며, 거주·투자 판단의 단독 근거로 쓰지 마세요.",
+  "stats": {
+    "parking": {
+      "n": 14,
+      "usable": true,
+      "min": 0.83,
+      "max": 1.64,
+      "avg": 1.292142857142857,
+      "q1": 1.02,
+      "median": 1.35,
+      "q3": 1.5625
+    },
+    "fee": {
+      "n": 12,
+      "usable": true,
+      "min": 998.0,
+      "max": 1462.0,
+      "avg": 1208.25,
+      "q1": 1048.75,
+      "median": 1183.0,
+      "q3": 1363.5
+    },
+    "security": {
+      "n": 14,
+      "usable": true,
+      "min": 136.66666666666666,
+      "max": 377.0,
+      "avg": 258.62857142857143,
+      "q1": 206.0,
+      "median": 243.0,
+      "q3": 324.3333333333333
+    },
+    "scale": {
+      "n": 14,
+      "usable": true,
+      "min": 412.0,
+      "max": 1024.0,
+      "avg": 714.1428571428571,
+      "q1": 499.5,
+      "median": 721.0,
+      "q3": 820.0
+    },
+    "age": {
+      "n": 14,
+      "usable": true,
+      "min": 2013.0,
+      "max": 2023.0,
+      "avg": 2016.0,
+      "q1": 2014.0,
+      "median": 2016.0,
+      "q3": 2016.75
+    },
+    "amenity": {
+      "n": 14,
+      "usable": true,
+      "min": 4.0,
+      "max": 12.0,
+      "avg": 7.357142857142857,
+      "q1": 5.0,
+      "median": 7.5,
+      "q3": 9.0
+    }
+  },
+  "reviewStats": {
+    "collected": 445,
+    "ad": 274,
+    "review": 156,
+    "unrelated": 15,
+    "evidence": 126
+  },
+  "dongSummary": {
+    "collected": 37,
+    "items": [
+      {
+        "key": "amenity",
+        "label": "교통·생활편의",
+        "polarity": "mixed",
+        "text": "일부 후기에서 광주 방면 버스 배차가 아쉽다는 언급이 있음",
+        "evidenceCount": 5,
+        "sources": [
+          {
+            "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+            "url": "https://example.com/demo/1",
+            "source": "naver_cafe",
+            "date": "20250310"
+          },
+          {
+            "title": "나주 빛가람동 2년 거주 솔직 후기",
+            "url": "https://example.com/demo/2",
+            "source": "naver_blog",
+            "date": "20250411"
+          },
+          {
+            "title": "혁신도시 살이 3년차 후기 정리",
+            "url": "https://example.com/demo/3",
+            "source": "blog",
+            "date": "20250512"
+          },
+          {
+            "title": "나주 혁신도시 주거 환경 정리 글",
+            "url": "https://example.com/demo/4",
+            "source": "web",
+            "date": "20250613"
+          },
+          {
+            "title": "거주자 평점과 장단점 - 예시 단지",
+            "url": "https://example.com/demo/5",
+            "source": "review_platform",
+            "date": "20250714"
+          }
+        ]
+      }
+    ]
+  },
+  "sources": {
+    "quant": "국토교통부 공동주택관리정보시스템(K-apt) 단지목록·기본정보·공용관리비, 국토교통부 아파트 매매 실거래가",
+    "qual": "Tavily 검색 API(카페·블로그·웹), 유튜브 Data API(댓글)",
+    "feeBaseMonth": "202606",
+    "tradeWindow": "202509~202608",
+    "llm": "claude-opus-5",
+    "endpoints": {},
+    "rule": "동 내 단지 분포에서 상위 25%(Q3) 밖이면 장점, 하위 25%(Q1) 밖이면 단점. 중간 50%는 카드를 만들지 않음."
+  },
+  "complexes": [
+    {
+      "kaptCode": "MOCK0001",
+      "name": "예시 1단지",
+      "addr": "전라남도 나주시 빛가람동 100",
+      "roadAddr": "전라남도 나주시 빛가람로 20",
+      "lat": 35.01614,
+      "lng": 126.790162,
+      "info": {
+        "builtYear": 2016,
+        "useApproveYmd": "20160915",
+        "houseCnt": 820.0,
+        "dongCnt": 5.0,
+        "heatType": "지역난방",
+        "manageType": "위탁관리",
+        "securityType": "위탁관리",
+        "builder": "예시건설",
+        "manageArea": 65674.9,
+        "parkingTotal": 763,
+        "guards": 4.0,
+        "cctv": 210.0,
+        "convenient": "슈퍼마켓, 어린이집, 경로당, 도서관",
+        "education": "초등학교, 중학교, 학원가",
+        "bus": "5분 이내",
+        "subway": "",
+        "monthlyCommonFee": null,
+        "feeBaseMonth": null,
+        "recentTrade": {
+          "amount": 34483.0,
+          "area": 59.94,
+          "floor": 10.0,
+          "ym": "202607",
+          "count": 11,
+          "medianAmount": 23180.0
+        }
+      },
+      "aspects": {
+        "parking": {
+          "label": "주차",
+          "unit": "대/세대",
+          "value": 0.93,
+          "verdict": "con",
+          "quantText": "세대당 주차 0.93대로 동 평균 1.29대보다 적음",
+          "qual": {
+            "text": "일부 후기에서 저녁 시간대 지상 주차가 어렵다는 언급이 있음",
+            "polarity": "con",
+            "evidenceCount": 6,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              },
+              {
+                "title": "나주 혁신도시 주거 환경 정리 글",
+                "url": "https://example.com/demo/4",
+                "source": "web",
+                "date": "20250613"
+              },
+              {
+                "title": "거주자 평점과 장단점 - 예시 단지",
+                "url": "https://example.com/demo/5",
+                "source": "review_platform",
+                "date": "20250714"
+              },
+              {
+                "title": "[영상] 나주 혁신도시 살기 어때요?",
+                "url": "https://example.com/demo/6",
+                "source": "youtube_comment",
+                "date": "20250815"
+              }
+            ]
+          },
+          "n": 14,
+          "rank": 12,
+          "dongAvg": 1.292142857142857,
+          "q1": 1.02,
+          "q3": 1.5625,
+          "median": 1.35
+        },
+        "fee": {
+          "label": "관리비",
+          "unit": "원/㎡",
+          "value": null,
+          "verdict": "none",
+          "quantText": "공개 데이터에 해당 수치가 없어 판정하지 않았습니다",
+          "qual": null,
+          "n": 12,
+          "rank": null
+        },
+        "security": {
+          "label": "보안·관리",
+          "unit": "세대/경비원",
+          "value": 205.0,
+          "verdict": "pro",
+          "quantText": "경비원 1명당 205세대로 동 평균 259세대보다 적음",
+          "qual": {
+            "text": "일부 후기에서 경비실 응대가 빠르다는 언급이 있음",
+            "polarity": "pro",
+            "evidenceCount": 4,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              },
+              {
+                "title": "나주 혁신도시 주거 환경 정리 글",
+                "url": "https://example.com/demo/4",
+                "source": "web",
+                "date": "20250613"
+              }
+            ]
+          },
+          "n": 14,
+          "rank": 3,
+          "dongAvg": 258.62857142857143,
+          "q1": 206.0,
+          "q3": 324.3333333333333,
+          "median": 243.0
+        },
+        "scale": {
+          "label": "규모",
+          "unit": "세대",
+          "value": 820.0,
+          "verdict": "none",
+          "quantText": "820세대 규모로 동 평균 714세대보다 많음",
+          "qual": null,
+          "n": 14,
+          "rank": 4,
+          "dongAvg": 714.1428571428571,
+          "q1": 499.5,
+          "q3": 820.0,
+          "median": 721.0
+        },
+        "age": {
+          "label": "노후도",
+          "unit": "년",
+          "value": 2016.0,
+          "verdict": "none",
+          "quantText": "2016년 준공으로 동 평균 2016년보다 같음",
+          "qual": {
+            "text": "일부 후기에서 배수구 냄새 등 노후 설비 관련 언급이 있음",
+            "polarity": "con",
+            "evidenceCount": 6,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              },
+              {
+                "title": "나주 혁신도시 주거 환경 정리 글",
+                "url": "https://example.com/demo/4",
+                "source": "web",
+                "date": "20250613"
+              },
+              {
+                "title": "거주자 평점과 장단점 - 예시 단지",
+                "url": "https://example.com/demo/5",
+                "source": "review_platform",
+                "date": "20250714"
+              },
+              {
+                "title": "[영상] 나주 혁신도시 살기 어때요?",
+                "url": "https://example.com/demo/6",
+                "source": "youtube_comment",
+                "date": "20250815"
+              }
+            ]
+          },
+          "n": 14,
+          "rank": 5,
+          "dongAvg": 2016.0,
+          "q1": 2014.0,
+          "q3": 2016.75,
+          "median": 2016.0
+        },
+        "amenity": {
+          "label": "교통·생활편의",
+          "unit": "개",
+          "value": 8.0,
+          "verdict": "none",
+          "quantText": "기본정보상 편의·교육시설 8개 항목으로 동 평균 7개보다 많음",
+          "qual": null,
+          "n": 14,
+          "rank": 6,
+          "dongAvg": 7.357142857142857,
+          "q1": 5.0,
+          "q3": 9.0,
+          "median": 7.5
+        }
+      },
+      "review": {
+        "collected": 57,
+        "ad": 34,
+        "review": 19,
+        "unrelated": 4,
+        "evidence": 16
+      }
+    },
+    {
+      "kaptCode": "MOCK0002",
+      "name": "예시 2단지",
+      "addr": "전라남도 나주시 빛가람동 107",
+      "roadAddr": "전라남도 나주시 빛가람로 31",
+      "lat": 35.029448,
+      "lng": 126.799204,
+      "info": {
+        "builtYear": 2016,
+        "useApproveYmd": "20161015",
+        "houseCnt": 412.0,
+        "dongCnt": 4.0,
+        "heatType": "개별난방",
+        "manageType": "위탁관리",
+        "securityType": "자체관리",
+        "builder": "예시건설",
+        "manageArea": 31555.1,
+        "parkingTotal": 655,
+        "guards": 2.0,
+        "cctv": 85.0,
+        "convenient": "슈퍼마켓, 어린이집, 경로당, 도서관",
+        "education": "초등학교, 중학교, 학원가",
+        "bus": "5분 이내",
+        "subway": "",
+        "monthlyCommonFee": null,
+        "feeBaseMonth": null,
+        "recentTrade": {
+          "amount": 25264.0,
+          "area": 59.94,
+          "floor": 12.0,
+          "ym": "202605",
+          "count": 20,
+          "medianAmount": 21761.0
+        }
+      },
+      "aspects": {
+        "parking": {
+          "label": "주차",
+          "unit": "대/세대",
+          "value": 1.59,
+          "verdict": "pro",
+          "quantText": "세대당 주차 1.59대로 동 평균 1.29대보다 많음",
+          "qual": null,
+          "n": 14,
+          "rank": 3,
+          "dongAvg": 1.292142857142857,
+          "q1": 1.02,
+          "q3": 1.5625,
+          "median": 1.35
+        },
+        "fee": {
+          "label": "관리비",
+          "unit": "원/㎡",
+          "value": null,
+          "verdict": "none",
+          "quantText": "공개 데이터에 해당 수치가 없어 판정하지 않았습니다",
+          "qual": {
+            "text": "일부 후기에서 여름철 공용 전기료 부담이 크다는 언급이 있음",
+            "polarity": "con",
+            "evidenceCount": 3,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              }
+            ]
+          },
+          "n": 12,
+          "rank": null
+        },
+        "security": {
+          "label": "보안·관리",
+          "unit": "세대/경비원",
+          "value": 206.0,
+          "verdict": "none",
+          "quantText": "경비원 1명당 206세대로 동 평균 259세대보다 적음",
+          "qual": null,
+          "n": 14,
+          "rank": 4,
+          "dongAvg": 258.62857142857143,
+          "q1": 206.0,
+          "q3": 324.3333333333333,
+          "median": 243.0
+        },
+        "scale": {
+          "label": "규모",
+          "unit": "세대",
+          "value": 412.0,
+          "verdict": "con",
+          "quantText": "412세대 규모로 동 평균 714세대보다 적음",
+          "qual": {
+            "text": "일부 후기에서 단지 내 상가와 커뮤니티 이용이 편하다는 언급이 있음",
+            "polarity": "pro",
+            "evidenceCount": 4,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              },
+              {
+                "title": "나주 혁신도시 주거 환경 정리 글",
+                "url": "https://example.com/demo/4",
+                "source": "web",
+                "date": "20250613"
+              }
+            ]
+          },
+          "n": 14,
+          "rank": 13,
+          "dongAvg": 714.1428571428571,
+          "q1": 499.5,
+          "q3": 820.0,
+          "median": 721.0
+        },
+        "age": {
+          "label": "노후도",
+          "unit": "년",
+          "value": 2016.0,
+          "verdict": "none",
+          "quantText": "2016년 준공으로 동 평균 2016년보다 같음",
+          "qual": {
+            "text": "일부 후기에서 배수구 냄새 등 노후 설비 관련 언급이 있음",
+            "polarity": "con",
+            "evidenceCount": 3,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              }
+            ]
+          },
+          "n": 14,
+          "rank": 5,
+          "dongAvg": 2016.0,
+          "q1": 2014.0,
+          "q3": 2016.75,
+          "median": 2016.0
+        },
+        "amenity": {
+          "label": "교통·생활편의",
+          "unit": "개",
+          "value": 8.0,
+          "verdict": "none",
+          "quantText": "기본정보상 편의·교육시설 8개 항목으로 동 평균 7개보다 많음",
+          "qual": null,
+          "n": 14,
+          "rank": 6,
+          "dongAvg": 7.357142857142857,
+          "q1": 5.0,
+          "q3": 9.0,
+          "median": 7.5
+        }
+      },
+      "review": {
+        "collected": 64,
+        "ad": 36,
+        "review": 26,
+        "unrelated": 2,
+        "evidence": 10
+      }
+    },
+    {
+      "kaptCode": "MOCK0003",
+      "name": "예시 3단지",
+      "addr": "전라남도 나주시 빛가람동 114",
+      "roadAddr": "전라남도 나주시 빛가람로 42",
+      "lat": 35.023901,
+      "lng": 126.789173,
+      "info": {
+        "builtYear": 2019,
+        "useApproveYmd": "20190315",
+        "houseCnt": 540.0,
+        "dongCnt": 13.0,
+        "heatType": "지역난방",
+        "manageType": "위탁관리",
+        "securityType": "자체관리",
+        "builder": "예시건설",
+        "manageArea": 48701.0,
+        "parkingTotal": 772,
+        "guards": 2.0,
+        "cctv": 192.0,
+        "convenient": "슈퍼마켓, 어린이집, 경로당, 도서관",
+        "education": "초등학교, 중학교, 학원가",
+        "bus": "5분 이내",
+        "subway": "",
+        "monthlyCommonFee": 51623060,
+        "feeBaseMonth": "202606",
+        "recentTrade": {
+          "amount": 40828.0,
+          "area": 84.97,
+          "floor": 4.0,
+          "ym": "202608",
+          "count": 21,
+          "medianAmount": 25269.0
+        }
+      },
+      "aspects": {
+        "parking": {
+          "label": "주차",
+          "unit": "대/세대",
+          "value": 1.43,
+          "verdict": "none",
+          "quantText": "세대당 주차 1.43대로 동 평균 1.29대보다 많음",
+          "qual": {
+            "text": "일부 후기에서 지하 주차 자리가 여유롭다는 언급이 있음",
+            "polarity": "pro",
+            "evidenceCount": 5,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              },
+              {
+                "title": "나주 혁신도시 주거 환경 정리 글",
+                "url": "https://example.com/demo/4",
+                "source": "web",
+                "date": "20250613"
+              },
+              {
+                "title": "거주자 평점과 장단점 - 예시 단지",
+                "url": "https://example.com/demo/5",
+                "source": "review_platform",
+                "date": "20250714"
+              }
+            ]
+          },
+          "n": 14,
+          "rank": 6,
+          "dongAvg": 1.292142857142857,
+          "q1": 1.02,
+          "q3": 1.5625,
+          "median": 1.35
+        },
+        "fee": {
+          "label": "관리비",
+          "unit": "원/㎡",
+          "value": 1060.0,
+          "verdict": "none",
+          "quantText": "㎡당 공용관리비 1,060원으로 동 평균 1,208원보다 낮음",
+          "qual": null,
+          "n": 12,
+          "rank": 4,
+          "dongAvg": 1208.25,
+          "q1": 1048.75,
+          "q3": 1363.5,
+          "median": 1183.0
+        },
+        "security": {
+          "label": "보안·관리",
+          "unit": "세대/경비원",
+          "value": 270.0,
+          "verdict": "none",
+          "quantText": "경비원 1명당 270세대로 동 평균 259세대보다 많음",
+          "qual": {
+            "text": "일부 후기에서 경비실 응대가 빠르다는 언급이 있음",
+            "polarity": "pro",
+            "evidenceCount": 4,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              },
+              {
+                "title": "나주 혁신도시 주거 환경 정리 글",
+                "url": "https://example.com/demo/4",
+                "source": "web",
+                "date": "20250613"
+              }
+            ]
+          },
+          "n": 14,
+          "rank": 9,
+          "dongAvg": 258.62857142857143,
+          "q1": 206.0,
+          "q3": 324.3333333333333,
+          "median": 243.0
+        },
+        "scale": {
+          "label": "규모",
+          "unit": "세대",
+          "value": 540.0,
+          "verdict": "none",
+          "quantText": "540세대 규모로 동 평균 714세대보다 적음",
+          "qual": null,
+          "n": 14,
+          "rank": 10,
+          "dongAvg": 714.1428571428571,
+          "q1": 499.5,
+          "q3": 820.0,
+          "median": 721.0
+        },
+        "age": {
+          "label": "노후도",
+          "unit": "년",
+          "value": 2019.0,
+          "verdict": "pro",
+          "quantText": "2019년 준공으로 동 평균 2016년보다 높음",
+          "qual": null,
+          "n": 14,
+          "rank": 2,
+          "dongAvg": 2016.0,
+          "q1": 2014.0,
+          "q3": 2016.75,
+          "median": 2016.0
+        },
+        "amenity": {
+          "label": "교통·생활편의",
+          "unit": "개",
+          "value": 9.0,
+          "verdict": "none",
+          "quantText": "기본정보상 편의·교육시설 9개 항목으로 동 평균 7개보다 많음",
+          "qual": {
+            "text": "일부 후기에서 도보권에 마트와 학원가가 있다는 언급이 있음",
+            "polarity": "pro",
+            "evidenceCount": 7,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              },
+              {
+                "title": "나주 혁신도시 주거 환경 정리 글",
+                "url": "https://example.com/demo/4",
+                "source": "web",
+                "date": "20250613"
+              },
+              {
+                "title": "거주자 평점과 장단점 - 예시 단지",
+                "url": "https://example.com/demo/5",
+                "source": "review_platform",
+                "date": "20250714"
+              },
+              {
+                "title": "[영상] 나주 혁신도시 살기 어때요?",
+                "url": "https://example.com/demo/6",
+                "source": "youtube_comment",
+                "date": "20250815"
+              },
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/7",
+                "source": "naver_cafe",
+                "date": "20250916"
+              }
+            ]
+          },
+          "n": 14,
+          "rank": 4,
+          "dongAvg": 7.357142857142857,
+          "q1": 5.0,
+          "q3": 9.0,
+          "median": 7.5
+        }
+      },
+      "review": {
+        "collected": 25,
+        "ad": 12,
+        "review": 12,
+        "unrelated": 1,
+        "evidence": 16
+      }
+    },
+    {
+      "kaptCode": "MOCK0004",
+      "name": "예시 4단지",
+      "addr": "전라남도 나주시 빛가람동 121",
+      "roadAddr": "전라남도 나주시 빛가람로 53",
+      "lat": 35.02058,
+      "lng": 126.775819,
+      "info": {
+        "builtYear": 2017,
+        "useApproveYmd": "20170815",
+        "houseCnt": 688.0,
+        "dongCnt": 12.0,
+        "heatType": "개별난방",
+        "manageType": "위탁관리",
+        "securityType": "위탁관리",
+        "builder": "예시건설",
+        "manageArea": 57363.1,
+        "parkingTotal": 1080,
+        "guards": 2.0,
+        "cctv": 99.0,
+        "convenient": "슈퍼마켓, 어린이집, 경로당, 도서관",
+        "education": "초등학교, 중학교, 학원가",
+        "bus": "5분 이내",
+        "subway": "",
+        "monthlyCommonFee": 74399941,
+        "feeBaseMonth": "202606",
+        "recentTrade": {
+          "amount": 27988.0,
+          "area": 59.94,
+          "floor": 20.0,
+          "ym": "202607",
+          "count": 17,
+          "medianAmount": 24293.0
+        }
+      },
+      "aspects": {
+        "parking": {
+          "label": "주차",
+          "unit": "대/세대",
+          "value": 1.57,
+          "verdict": "pro",
+          "quantText": "세대당 주차 1.57대로 동 평균 1.29대보다 많음",
+          "qual": null,
+          "n": 14,
+          "rank": 4,
+          "dongAvg": 1.292142857142857,
+          "q1": 1.02,
+          "q3": 1.5625,
+          "median": 1.35
+        },
+        "fee": {
+          "label": "관리비",
+          "unit": "원/㎡",
+          "value": 1297.0,
+          "verdict": "none",
+          "quantText": "㎡당 공용관리비 1,297원으로 동 평균 1,208원보다 높음",
+          "qual": null,
+          "n": 12,
+          "rank": 8,
+          "dongAvg": 1208.25,
+          "q1": 1048.75,
+          "q3": 1363.5,
+          "median": 1183.0
+        },
+        "security": {
+          "label": "보안·관리",
+          "unit": "세대/경비원",
+          "value": 344.0,
+          "verdict": "con",
+          "quantText": "경비원 1명당 344세대로 동 평균 259세대보다 많음",
+          "qual": {
+            "text": "일부 후기에서 경비실 응대가 빠르다는 언급이 있음",
+            "polarity": "pro",
+            "evidenceCount": 5,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              },
+              {
+                "title": "나주 혁신도시 주거 환경 정리 글",
+                "url": "https://example.com/demo/4",
+                "source": "web",
+                "date": "20250613"
+              },
+              {
+                "title": "거주자 평점과 장단점 - 예시 단지",
+                "url": "https://example.com/demo/5",
+                "source": "review_platform",
+                "date": "20250714"
+              }
+            ]
+          },
+          "n": 14,
+          "rank": 13,
+          "dongAvg": 258.62857142857143,
+          "q1": 206.0,
+          "q3": 324.3333333333333,
+          "median": 243.0
+        },
+        "scale": {
+          "label": "규모",
+          "unit": "세대",
+          "value": 688.0,
+          "verdict": "none",
+          "quantText": "688세대 규모로 동 평균 714세대보다 적음",
+          "qual": null,
+          "n": 14,
+          "rank": 8,
+          "dongAvg": 714.1428571428571,
+          "q1": 499.5,
+          "q3": 820.0,
+          "median": 721.0
+        },
+        "age": {
+          "label": "노후도",
+          "unit": "년",
+          "value": 2017.0,
+          "verdict": "pro",
+          "quantText": "2017년 준공으로 동 평균 2016년보다 높음",
+          "qual": null,
+          "n": 14,
+          "rank": 4,
+          "dongAvg": 2016.0,
+          "q1": 2014.0,
+          "q3": 2016.75,
+          "median": 2016.0
+        },
+        "amenity": {
+          "label": "교통·생활편의",
+          "unit": "개",
+          "value": 6.0,
+          "verdict": "none",
+          "quantText": "기본정보상 편의·교육시설 6개 항목으로 동 평균 7개보다 적음",
+          "qual": null,
+          "n": 14,
+          "rank": 9,
+          "dongAvg": 7.357142857142857,
+          "q1": 5.0,
+          "q3": 9.0,
+          "median": 7.5
+        }
+      },
+      "review": {
+        "collected": 60,
+        "ad": 37,
+        "review": 23,
+        "unrelated": 0,
+        "evidence": 5
+      }
+    },
+    {
+      "kaptCode": "MOCK0005",
+      "name": "예시 5단지",
+      "addr": "전라남도 나주시 빛가람동 128",
+      "roadAddr": "전라남도 나주시 빛가람로 64",
+      "lat": 35.008838,
+      "lng": 126.774074,
+      "info": {
+        "builtYear": 2015,
+        "useApproveYmd": "20150615",
+        "houseCnt": 1024.0,
+        "dongCnt": 12.0,
+        "heatType": "지역난방",
+        "manageType": "위탁관리",
+        "securityType": "자체관리",
+        "builder": "예시건설",
+        "manageArea": 77582.5,
+        "parkingTotal": 1137,
+        "guards": 3.0,
+        "cctv": 80.0,
+        "convenient": "슈퍼마켓, 어린이집, 경로당, 도서관",
+        "education": "초등학교, 중학교, 학원가",
+        "bus": "5분 이내",
+        "subway": "",
+        "monthlyCommonFee": 78513490,
+        "feeBaseMonth": "202606",
+        "recentTrade": {
+          "amount": 24279.0,
+          "area": 84.97,
+          "floor": 13.0,
+          "ym": "202606",
+          "count": 24,
+          "medianAmount": 34746.0
+        }
+      },
+      "aspects": {
+        "parking": {
+          "label": "주차",
+          "unit": "대/세대",
+          "value": 1.11,
+          "verdict": "none",
+          "quantText": "세대당 주차 1.11대로 동 평균 1.29대보다 적음",
+          "qual": {
+            "text": "일부 후기에서 지하 주차 자리가 여유롭다는 언급이 있음",
+            "polarity": "pro",
+            "evidenceCount": 5,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              },
+              {
+                "title": "나주 혁신도시 주거 환경 정리 글",
+                "url": "https://example.com/demo/4",
+                "source": "web",
+                "date": "20250613"
+              },
+              {
+                "title": "거주자 평점과 장단점 - 예시 단지",
+                "url": "https://example.com/demo/5",
+                "source": "review_platform",
+                "date": "20250714"
+              }
+            ]
+          },
+          "n": 14,
+          "rank": 10,
+          "dongAvg": 1.292142857142857,
+          "q1": 1.02,
+          "q3": 1.5625,
+          "median": 1.35
+        },
+        "fee": {
+          "label": "관리비",
+          "unit": "원/㎡",
+          "value": 1012.0,
+          "verdict": "pro",
+          "quantText": "㎡당 공용관리비 1,012원으로 동 평균 1,208원보다 낮음",
+          "qual": null,
+          "n": 12,
+          "rank": 2,
+          "dongAvg": 1208.25,
+          "q1": 1048.75,
+          "q3": 1363.5,
+          "median": 1183.0
+        },
+        "security": {
+          "label": "보안·관리",
+          "unit": "세대/경비원",
+          "value": 341.3333333333333,
+          "verdict": "con",
+          "quantText": "경비원 1명당 341세대로 동 평균 259세대보다 많음",
+          "qual": null,
+          "n": 14,
+          "rank": 11,
+          "dongAvg": 258.62857142857143,
+          "q1": 206.0,
+          "q3": 324.3333333333333,
+          "median": 243.0
+        },
+        "scale": {
+          "label": "규모",
+          "unit": "세대",
+          "value": 1024.0,
+          "verdict": "pro",
+          "quantText": "1,024세대 규모로 동 평균 714세대보다 많음",
+          "qual": {
+            "text": "일부 후기에서 단지 내 상가와 커뮤니티 이용이 편하다는 언급이 있음",
+            "polarity": "pro",
+            "evidenceCount": 3,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              }
+            ]
+          },
+          "n": 14,
+          "rank": 1,
+          "dongAvg": 714.1428571428571,
+          "q1": 499.5,
+          "q3": 820.0,
+          "median": 721.0
+        },
+        "age": {
+          "label": "노후도",
+          "unit": "년",
+          "value": 2015.0,
+          "verdict": "none",
+          "quantText": "2015년 준공으로 동 평균 2016년보다 낮음",
+          "qual": null,
+          "n": 14,
+          "rank": 9,
+          "dongAvg": 2016.0,
+          "q1": 2014.0,
+          "q3": 2016.75,
+          "median": 2016.0
+        },
+        "amenity": {
+          "label": "교통·생활편의",
+          "unit": "개",
+          "value": 12.0,
+          "verdict": "pro",
+          "quantText": "기본정보상 편의·교육시설 12개 항목으로 동 평균 7개보다 많음",
+          "qual": {
+            "text": "일부 후기에서 도보권에 마트와 학원가가 있다는 언급이 있음",
+            "polarity": "pro",
+            "evidenceCount": 4,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              },
+              {
+                "title": "나주 혁신도시 주거 환경 정리 글",
+                "url": "https://example.com/demo/4",
+                "source": "web",
+                "date": "20250613"
+              }
+            ]
+          },
+          "n": 14,
+          "rank": 1,
+          "dongAvg": 7.357142857142857,
+          "q1": 5.0,
+          "q3": 9.0,
+          "median": 7.5
+        }
+      },
+      "review": {
+        "collected": 53,
+        "ad": 37,
+        "review": 13,
+        "unrelated": 3,
+        "evidence": 12
+      }
+    },
+    {
+      "kaptCode": "MOCK0006",
+      "name": "예시 6단지",
+      "addr": "전라남도 나주시 빛가람동 135",
+      "roadAddr": "전라남도 나주시 빛가람로 75",
+      "lat": 35.022908,
+      "lng": 126.796151,
+      "info": {
+        "builtYear": 2016,
+        "useApproveYmd": "20160215",
+        "houseCnt": 820.0,
+        "dongCnt": 10.0,
+        "heatType": "지역난방",
+        "manageType": "자치관리",
+        "securityType": "자체관리",
+        "builder": "예시건설",
+        "manageArea": 72465.6,
+        "parkingTotal": 1263,
+        "guards": 6.0,
+        "cctv": 88.0,
+        "convenient": "슈퍼마켓, 어린이집, 경로당, 도서관",
+        "education": "초등학교, 중학교, 학원가",
+        "bus": "5분 이내",
+        "subway": "",
+        "monthlyCommonFee": 73552584,
+        "feeBaseMonth": "202606",
+        "recentTrade": {
+          "amount": 27077.0,
+          "area": 84.97,
+          "floor": 6.0,
+          "ym": "202607",
+          "count": 7,
+          "medianAmount": 30612.0
+        }
+      },
+      "aspects": {
+        "parking": {
+          "label": "주차",
+          "unit": "대/세대",
+          "value": 1.54,
+          "verdict": "none",
+          "quantText": "세대당 주차 1.54대로 동 평균 1.29대보다 많음",
+          "qual": {
+            "text": "일부 후기에서 저녁 시간대 지상 주차가 어렵다는 언급이 있음",
+            "polarity": "con",
+            "evidenceCount": 5,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              },
+              {
+                "title": "나주 혁신도시 주거 환경 정리 글",
+                "url": "https://example.com/demo/4",
+                "source": "web",
+                "date": "20250613"
+              },
+              {
+                "title": "거주자 평점과 장단점 - 예시 단지",
+                "url": "https://example.com/demo/5",
+                "source": "review_platform",
+                "date": "20250714"
+              }
+            ]
+          },
+          "n": 14,
+          "rank": 5,
+          "dongAvg": 1.292142857142857,
+          "q1": 1.02,
+          "q3": 1.5625,
+          "median": 1.35
+        },
+        "fee": {
+          "label": "관리비",
+          "unit": "원/㎡",
+          "value": 1015.0,
+          "verdict": "pro",
+          "quantText": "㎡당 공용관리비 1,015원으로 동 평균 1,208원보다 낮음",
+          "qual": {
+            "text": "일부 후기에서 겨울 관리비가 생각보다 적게 나온다는 언급이 있음",
+            "polarity": "pro",
+            "evidenceCount": 3,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              }
+            ]
+          },
+          "n": 12,
+          "rank": 3,
+          "dongAvg": 1208.25,
+          "q1": 1048.75,
+          "q3": 1363.5,
+          "median": 1183.0
+        },
+        "security": {
+          "label": "보안·관리",
+          "unit": "세대/경비원",
+          "value": 136.66666666666666,
+          "verdict": "pro",
+          "quantText": "경비원 1명당 137세대로 동 평균 259세대보다 적음",
+          "qual": null,
+          "n": 14,
+          "rank": 1,
+          "dongAvg": 258.62857142857143,
+          "q1": 206.0,
+          "q3": 324.3333333333333,
+          "median": 243.0
+        },
+        "scale": {
+          "label": "규모",
+          "unit": "세대",
+          "value": 820.0,
+          "verdict": "none",
+          "quantText": "820세대 규모로 동 평균 714세대보다 많음",
+          "qual": {
+            "text": "일부 후기에서 단지 내 상가와 커뮤니티 이용이 편하다는 언급이 있음",
+            "polarity": "pro",
+            "evidenceCount": 6,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              },
+              {
+                "title": "나주 혁신도시 주거 환경 정리 글",
+                "url": "https://example.com/demo/4",
+                "source": "web",
+                "date": "20250613"
+              },
+              {
+                "title": "거주자 평점과 장단점 - 예시 단지",
+                "url": "https://example.com/demo/5",
+                "source": "review_platform",
+                "date": "20250714"
+              },
+              {
+                "title": "[영상] 나주 혁신도시 살기 어때요?",
+                "url": "https://example.com/demo/6",
+                "source": "youtube_comment",
+                "date": "20250815"
+              }
+            ]
+          },
+          "n": 14,
+          "rank": 4,
+          "dongAvg": 714.1428571428571,
+          "q1": 499.5,
+          "q3": 820.0,
+          "median": 721.0
+        },
+        "age": {
+          "label": "노후도",
+          "unit": "년",
+          "value": 2016.0,
+          "verdict": "none",
+          "quantText": "2016년 준공으로 동 평균 2016년보다 같음",
+          "qual": {
+            "text": "일부 후기에서 배수구 냄새 등 노후 설비 관련 언급이 있음",
+            "polarity": "con",
+            "evidenceCount": 7,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              },
+              {
+                "title": "나주 혁신도시 주거 환경 정리 글",
+                "url": "https://example.com/demo/4",
+                "source": "web",
+                "date": "20250613"
+              },
+              {
+                "title": "거주자 평점과 장단점 - 예시 단지",
+                "url": "https://example.com/demo/5",
+                "source": "review_platform",
+                "date": "20250714"
+              },
+              {
+                "title": "[영상] 나주 혁신도시 살기 어때요?",
+                "url": "https://example.com/demo/6",
+                "source": "youtube_comment",
+                "date": "20250815"
+              },
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/7",
+                "source": "naver_cafe",
+                "date": "20250916"
+              }
+            ]
+          },
+          "n": 14,
+          "rank": 5,
+          "dongAvg": 2016.0,
+          "q1": 2014.0,
+          "q3": 2016.75,
+          "median": 2016.0
+        },
+        "amenity": {
+          "label": "교통·생활편의",
+          "unit": "개",
+          "value": 10.0,
+          "verdict": "pro",
+          "quantText": "기본정보상 편의·교육시설 10개 항목으로 동 평균 7개보다 많음",
+          "qual": null,
+          "n": 14,
+          "rank": 3,
+          "dongAvg": 7.357142857142857,
+          "q1": 5.0,
+          "q3": 9.0,
+          "median": 7.5
+        }
+      },
+      "review": {
+        "collected": 30,
+        "ad": 19,
+        "review": 10,
+        "unrelated": 1,
+        "evidence": 21
+      }
+    },
+    {
+      "kaptCode": "MOCK0007",
+      "name": "예시 7단지",
+      "addr": "전라남도 나주시 빛가람동 142",
+      "roadAddr": "전라남도 나주시 빛가람로 86",
+      "lat": 35.017101,
+      "lng": 126.794232,
+      "info": {
+        "builtYear": 2014,
+        "useApproveYmd": "20140915",
+        "houseCnt": 1024.0,
+        "dongCnt": 12.0,
+        "heatType": "지역난방",
+        "manageType": "자치관리",
+        "securityType": "자체관리",
+        "builder": "예시건설",
+        "manageArea": 76378.2,
+        "parkingTotal": 1679,
+        "guards": 3.0,
+        "cctv": 99.0,
+        "convenient": "슈퍼마켓, 어린이집, 경로당, 도서관",
+        "education": "초등학교, 중학교, 학원가",
+        "bus": "5분 이내",
+        "subway": "",
+        "monthlyCommonFee": 76225444,
+        "feeBaseMonth": "202606",
+        "recentTrade": {
+          "amount": 32179.0,
+          "area": 74.99,
+          "floor": 2.0,
+          "ym": "202605",
+          "count": 14,
+          "medianAmount": 22068.0
+        }
+      },
+      "aspects": {
+        "parking": {
+          "label": "주차",
+          "unit": "대/세대",
+          "value": 1.64,
+          "verdict": "pro",
+          "quantText": "세대당 주차 1.64대로 동 평균 1.29대보다 많음",
+          "qual": {
+            "text": "일부 후기에서 지하 주차 자리가 여유롭다는 언급이 있음",
+            "polarity": "pro",
+            "evidenceCount": 3,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              }
+            ]
+          },
+          "n": 14,
+          "rank": 1,
+          "dongAvg": 1.292142857142857,
+          "q1": 1.02,
+          "q3": 1.5625,
+          "median": 1.35
+        },
+        "fee": {
+          "label": "관리비",
+          "unit": "원/㎡",
+          "value": 998.0,
+          "verdict": "pro",
+          "quantText": "㎡당 공용관리비 998원으로 동 평균 1,208원보다 낮음",
+          "qual": {
+            "text": "일부 후기에서 여름철 공용 전기료 부담이 크다는 언급이 있음",
+            "polarity": "con",
+            "evidenceCount": 6,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              },
+              {
+                "title": "나주 혁신도시 주거 환경 정리 글",
+                "url": "https://example.com/demo/4",
+                "source": "web",
+                "date": "20250613"
+              },
+              {
+                "title": "거주자 평점과 장단점 - 예시 단지",
+                "url": "https://example.com/demo/5",
+                "source": "review_platform",
+                "date": "20250714"
+              },
+              {
+                "title": "[영상] 나주 혁신도시 살기 어때요?",
+                "url": "https://example.com/demo/6",
+                "source": "youtube_comment",
+                "date": "20250815"
+              }
+            ]
+          },
+          "n": 12,
+          "rank": 1,
+          "dongAvg": 1208.25,
+          "q1": 1048.75,
+          "q3": 1363.5,
+          "median": 1183.0
+        },
+        "security": {
+          "label": "보안·관리",
+          "unit": "세대/경비원",
+          "value": 341.3333333333333,
+          "verdict": "con",
+          "quantText": "경비원 1명당 341세대로 동 평균 259세대보다 많음",
+          "qual": {
+            "text": "일부 후기에서 경비실 응대가 빠르다는 언급이 있음",
+            "polarity": "pro",
+            "evidenceCount": 5,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              },
+              {
+                "title": "나주 혁신도시 주거 환경 정리 글",
+                "url": "https://example.com/demo/4",
+                "source": "web",
+                "date": "20250613"
+              },
+              {
+                "title": "거주자 평점과 장단점 - 예시 단지",
+                "url": "https://example.com/demo/5",
+                "source": "review_platform",
+                "date": "20250714"
+              }
+            ]
+          },
+          "n": 14,
+          "rank": 11,
+          "dongAvg": 258.62857142857143,
+          "q1": 206.0,
+          "q3": 324.3333333333333,
+          "median": 243.0
+        },
+        "scale": {
+          "label": "규모",
+          "unit": "세대",
+          "value": 1024.0,
+          "verdict": "pro",
+          "quantText": "1,024세대 규모로 동 평균 714세대보다 많음",
+          "qual": {
+            "text": "일부 후기에서 단지 내 상가와 커뮤니티 이용이 편하다는 언급이 있음",
+            "polarity": "pro",
+            "evidenceCount": 4,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              },
+              {
+                "title": "나주 혁신도시 주거 환경 정리 글",
+                "url": "https://example.com/demo/4",
+                "source": "web",
+                "date": "20250613"
+              }
+            ]
+          },
+          "n": 14,
+          "rank": 1,
+          "dongAvg": 714.1428571428571,
+          "q1": 499.5,
+          "q3": 820.0,
+          "median": 721.0
+        },
+        "age": {
+          "label": "노후도",
+          "unit": "년",
+          "value": 2014.0,
+          "verdict": "none",
+          "quantText": "2014년 준공으로 동 평균 2016년보다 낮음",
+          "qual": null,
+          "n": 14,
+          "rank": 10,
+          "dongAvg": 2016.0,
+          "q1": 2014.0,
+          "q3": 2016.75,
+          "median": 2016.0
+        },
+        "amenity": {
+          "label": "교통·생활편의",
+          "unit": "개",
+          "value": 7.0,
+          "verdict": "none",
+          "quantText": "기본정보상 편의·교육시설 7개 항목으로 동 평균 7개보다 적음",
+          "qual": null,
+          "n": 14,
+          "rank": 8,
+          "dongAvg": 7.357142857142857,
+          "q1": 5.0,
+          "q3": 9.0,
+          "median": 7.5
+        }
+      },
+      "review": {
+        "collected": 55,
+        "ad": 31,
+        "review": 21,
+        "unrelated": 3,
+        "evidence": 18
+      }
+    },
+    {
+      "kaptCode": "MOCK0008",
+      "name": "예시 8단지",
+      "addr": "전라남도 나주시 빛가람동 149",
+      "roadAddr": "전라남도 나주시 빛가람로 97",
+      "lat": 35.006806,
+      "lng": 126.782735,
+      "info": {
+        "builtYear": 2014,
+        "useApproveYmd": "20140915",
+        "houseCnt": 688.0,
+        "dongCnt": 9.0,
+        "heatType": "개별난방",
+        "manageType": "자치관리",
+        "securityType": "위탁관리",
+        "builder": "예시건설",
+        "manageArea": 60633.0,
+        "parkingTotal": 1108,
+        "guards": 3.0,
+        "cctv": 209.0,
+        "convenient": "슈퍼마켓, 어린이집, 경로당, 도서관",
+        "education": "초등학교, 중학교, 학원가",
+        "bus": "5분 이내",
+        "subway": "",
+        "monthlyCommonFee": 81369486,
+        "feeBaseMonth": "202606",
+        "recentTrade": {
+          "amount": 32468.0,
+          "area": 59.94,
+          "floor": 12.0,
+          "ym": "202608",
+          "count": 7,
+          "medianAmount": 27565.0
+        }
+      },
+      "aspects": {
+        "parking": {
+          "label": "주차",
+          "unit": "대/세대",
+          "value": 1.61,
+          "verdict": "pro",
+          "quantText": "세대당 주차 1.61대로 동 평균 1.29대보다 많음",
+          "qual": null,
+          "n": 14,
+          "rank": 2,
+          "dongAvg": 1.292142857142857,
+          "q1": 1.02,
+          "q3": 1.5625,
+          "median": 1.35
+        },
+        "fee": {
+          "label": "관리비",
+          "unit": "원/㎡",
+          "value": 1342.0,
+          "verdict": "none",
+          "quantText": "㎡당 공용관리비 1,342원으로 동 평균 1,208원보다 높음",
+          "qual": {
+            "text": "일부 후기에서 겨울 관리비가 생각보다 적게 나온다는 언급이 있음",
+            "polarity": "pro",
+            "evidenceCount": 7,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              },
+              {
+                "title": "나주 혁신도시 주거 환경 정리 글",
+                "url": "https://example.com/demo/4",
+                "source": "web",
+                "date": "20250613"
+              },
+              {
+                "title": "거주자 평점과 장단점 - 예시 단지",
+                "url": "https://example.com/demo/5",
+                "source": "review_platform",
+                "date": "20250714"
+              },
+              {
+                "title": "[영상] 나주 혁신도시 살기 어때요?",
+                "url": "https://example.com/demo/6",
+                "source": "youtube_comment",
+                "date": "20250815"
+              },
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/7",
+                "source": "naver_cafe",
+                "date": "20250916"
+              }
+            ]
+          },
+          "n": 12,
+          "rank": 9,
+          "dongAvg": 1208.25,
+          "q1": 1048.75,
+          "q3": 1363.5,
+          "median": 1183.0
+        },
+        "security": {
+          "label": "보안·관리",
+          "unit": "세대/경비원",
+          "value": 229.33333333333334,
+          "verdict": "none",
+          "quantText": "경비원 1명당 229세대로 동 평균 259세대보다 적음",
+          "qual": null,
+          "n": 14,
+          "rank": 6,
+          "dongAvg": 258.62857142857143,
+          "q1": 206.0,
+          "q3": 324.3333333333333,
+          "median": 243.0
+        },
+        "scale": {
+          "label": "규모",
+          "unit": "세대",
+          "value": 688.0,
+          "verdict": "none",
+          "quantText": "688세대 규모로 동 평균 714세대보다 적음",
+          "qual": null,
+          "n": 14,
+          "rank": 8,
+          "dongAvg": 714.1428571428571,
+          "q1": 499.5,
+          "q3": 820.0,
+          "median": 721.0
+        },
+        "age": {
+          "label": "노후도",
+          "unit": "년",
+          "value": 2014.0,
+          "verdict": "none",
+          "quantText": "2014년 준공으로 동 평균 2016년보다 낮음",
+          "qual": {
+            "text": "일부 후기에서 배수구 냄새 등 노후 설비 관련 언급이 있음",
+            "polarity": "con",
+            "evidenceCount": 3,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              }
+            ]
+          },
+          "n": 14,
+          "rank": 10,
+          "dongAvg": 2016.0,
+          "q1": 2014.0,
+          "q3": 2016.75,
+          "median": 2016.0
+        },
+        "amenity": {
+          "label": "교통·생활편의",
+          "unit": "개",
+          "value": 5.0,
+          "verdict": "none",
+          "quantText": "기본정보상 편의·교육시설 5개 항목으로 동 평균 7개보다 적음",
+          "qual": {
+            "text": "일부 후기에서 광주 방면 출퇴근 버스가 부족하다는 언급이 있음",
+            "polarity": "con",
+            "evidenceCount": 7,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              },
+              {
+                "title": "나주 혁신도시 주거 환경 정리 글",
+                "url": "https://example.com/demo/4",
+                "source": "web",
+                "date": "20250613"
+              },
+              {
+                "title": "거주자 평점과 장단점 - 예시 단지",
+                "url": "https://example.com/demo/5",
+                "source": "review_platform",
+                "date": "20250714"
+              },
+              {
+                "title": "[영상] 나주 혁신도시 살기 어때요?",
+                "url": "https://example.com/demo/6",
+                "source": "youtube_comment",
+                "date": "20250815"
+              },
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/7",
+                "source": "naver_cafe",
+                "date": "20250916"
+              }
+            ]
+          },
+          "n": 14,
+          "rank": 10,
+          "dongAvg": 7.357142857142857,
+          "q1": 5.0,
+          "q3": 9.0,
+          "median": 7.5
+        }
+      },
+      "review": {
+        "collected": 53,
+        "ad": 33,
+        "review": 20,
+        "unrelated": 0,
+        "evidence": 17
+      }
+    },
+    {
+      "kaptCode": "MOCK0009",
+      "name": "예시 9단지",
+      "addr": "전라남도 나주시 빛가람동 156",
+      "roadAddr": "전라남도 나주시 빛가람로 108",
+      "lat": 35.033234,
+      "lng": 126.791084,
+      "info": {
+        "builtYear": 2013,
+        "useApproveYmd": "20130615",
+        "houseCnt": 486.0,
+        "dongCnt": 11.0,
+        "heatType": "지역난방",
+        "manageType": "위탁관리",
+        "securityType": "자체관리",
+        "builder": "예시건설",
+        "manageArea": 42258.7,
+        "parkingTotal": 656,
+        "guards": 2.0,
+        "cctv": 169.0,
+        "convenient": "슈퍼마켓, 어린이집, 경로당, 도서관",
+        "education": "초등학교, 중학교, 학원가",
+        "bus": "5분 이내",
+        "subway": "",
+        "monthlyCommonFee": 51175286,
+        "feeBaseMonth": "202606",
+        "recentTrade": {
+          "amount": 34504.0,
+          "area": 74.99,
+          "floor": 4.0,
+          "ym": "202607",
+          "count": 3,
+          "medianAmount": 21018.0
+        }
+      },
+      "aspects": {
+        "parking": {
+          "label": "주차",
+          "unit": "대/세대",
+          "value": 1.35,
+          "verdict": "none",
+          "quantText": "세대당 주차 1.35대로 동 평균 1.29대보다 많음",
+          "qual": null,
+          "n": 14,
+          "rank": 7,
+          "dongAvg": 1.292142857142857,
+          "q1": 1.02,
+          "q3": 1.5625,
+          "median": 1.35
+        },
+        "fee": {
+          "label": "관리비",
+          "unit": "원/㎡",
+          "value": 1211.0,
+          "verdict": "none",
+          "quantText": "㎡당 공용관리비 1,211원으로 동 평균 1,208원보다 높음",
+          "qual": {
+            "text": "일부 후기에서 여름철 공용 전기료 부담이 크다는 언급이 있음",
+            "polarity": "con",
+            "evidenceCount": 7,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              },
+              {
+                "title": "나주 혁신도시 주거 환경 정리 글",
+                "url": "https://example.com/demo/4",
+                "source": "web",
+                "date": "20250613"
+              },
+              {
+                "title": "거주자 평점과 장단점 - 예시 단지",
+                "url": "https://example.com/demo/5",
+                "source": "review_platform",
+                "date": "20250714"
+              },
+              {
+                "title": "[영상] 나주 혁신도시 살기 어때요?",
+                "url": "https://example.com/demo/6",
+                "source": "youtube_comment",
+                "date": "20250815"
+              },
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/7",
+                "source": "naver_cafe",
+                "date": "20250916"
+              }
+            ]
+          },
+          "n": 12,
+          "rank": 7,
+          "dongAvg": 1208.25,
+          "q1": 1048.75,
+          "q3": 1363.5,
+          "median": 1183.0
+        },
+        "security": {
+          "label": "보안·관리",
+          "unit": "세대/경비원",
+          "value": 243.0,
+          "verdict": "none",
+          "quantText": "경비원 1명당 243세대로 동 평균 259세대보다 적음",
+          "qual": {
+            "text": "일부 후기에서 경비실 응대가 빠르다는 언급이 있음",
+            "polarity": "pro",
+            "evidenceCount": 4,
+            "sources": [
+              {
+                "title": "빛가람동 입주민 카페 - 이사 오신 분들 참고하세요",
+                "url": "https://example.com/demo/1",
+                "source": "naver_cafe",
+                "date": "20250310"
+              },
+              {
+                "title": "나주 빛가람동 2년 거주 솔직 후기",
+                "url": "https://example.com/demo/2",
+                "source": "naver_blog",
+                "date": "20250411"
+              },
+              {
+                "title": "혁신도시 살이 3년차 후기 정리",
+                "url": "https://example.com/demo/3",
+                "source": "blog",
+                "date": "20250512"
+              },
+              {
+                "title": "나주 혁신도시 주거 환경 정리 글",
+                "url": "https://example.com/demo/4",
+                "source": "web",
+                "date": "20250613"
+              }
+            ]
+          },
+          "n": 14,
+          "rank": 7,
+          "dongAvg": 258.62857142857143,
+          "q1": 206.0,
+          "q3": 324.3333333333333,
+          "median": 243.0
+        },
+        "scale": {
+          "label": "규모",
+          "unit": "세대",
+          "value": 486.0,
+          "verdict": "con",
+          "quantText": "486세대 규모로 동 평균 714세대보다 적음",
+          "qual": null,
+          "n": 14,
+          "rank": 11,
+          "dongAvg": 714.1428571428571,
+          "q1": 499.5,
+          "q3": 820.0,
+          "median": 721.0
+        },
+        "age": {
+          "label": "노후도",
+          "unit": "년",
+          "value": 2013.0,
+          "verdict": "con",
+          "quantText": "2013년 준공으로 동 평균 2016년보다 낮음",
+          "qual": null,
+          "n": 14,
+          "rank": 12,
+          "dongAvg": 2016.0,
+          "q1": 2014.0,
+          "q3": 2016.75,
+          "median": 2016.0
+        },
+        "amenity": {
+          "label": "교통·생활편의",
+          "unit": "개",
+          "value": 9.0,
+          "verdict": "none",
+          "quantText": "기본정보상 편의·교육시설 9개 항목으로 동 평균 7개보다 많음",
+          "qual": null,
+          "n": 14,
+          "rank": 4,
+          "dongAvg": 7.357142857142857,
+          "q1": 5.0,
+          "q3": 9.0,
+          "median": 7.5
+        }
+      },
+      "review": {
+        "collected": 48,
+        "ad": 35,
+        "review": 12,
+        "unrelated": 1,
+        "evidence": 11
+      }
+    },
+    {
+      "kaptCode": "MOCK0010",
+      "name": "예시 10단지",
+      "addr": "전라남도 나주시 빛가람동 163",
+      "roadAddr": "전라남도 나주시 빛가람로 119",
+      "lat": 35.024902,
+      "lng": 126.787763,
+      "info": {
+        "builtYear": 2023,
+        "useApproveYmd": "20230215",
+        "houseCnt": 412.0,
+        "dongCnt": 11.0,
+        "heatType": "개별난방",
+        "manageType": "위탁관리",
+        "securityType": "자체관리",
+        "builder": "예시건설",
+        "manageArea": 41209.7,
+        "parkingTotal": 408,
+        "guards": 2.0,
+        "cctv": 218.0,
+        "convenient": "슈퍼마켓, 어린이집, 경로당, 도서관",
+        "education": "초등학교, 중학교, 학원가",
+        "bus": "5분 이내",
+        "subway": "",
+        "monthlyCommonFee": 59135919,
+        "feeBaseMonth": "202606",
+        "recentTrade": {
+          "amount": 28665.0,
+          "area": 59.94,
+          "floor": 17.0,
+          "ym": "202606",
+          "count": 17,
+          "medianAmount": 26606.0
+        }
+      },
+      "aspects": {
+        "parking": {
+          "label": "주차",
+          "unit": "대/세대",
+          "value": 0.99,
+          "verdict": "con",
+          "quantText": "세대당 주차 0.99대로 동 평균 1.29대보다 적음",
+          "qual": null,
+          "n": 14,
+          "rank": 11,
+          "dongAvg": 1.292142857142857,
+          "q1": 1.02,
+          "q3": 1.5625,
+          "median": 1.35
+        },
+        "fee": {
+          "label": "관리비",
+          "unit": "원/㎡",
+          "value": 1435.0,
+          "verdict": "con",
+          "quantText": "㎡당 공용관리비 1,435원으로 동 평균 1,208원보다 높음",
+          "qual": null,
+          "n": 12,
+          "rank": 11,
+          "dongAvg": 1208.25,
+          "q1": 1048.75,
+          "q3": 1363.5,
+          "median": 1183.0
+        },
+        "security": {
+          "label": "보안·관리",
+          "unit": "세대/경비원",
+          "value": 206.0,
+          "verdict": "none",
+          "quantText": "경비원 1명당 206세대로 동 평균 259세대보다 적음",
+          "qual": null,
+          "n": 14,
+          "rank": 4,
+          "dongAvg": 258.62857142857143,
+          "q1": 206.0,
+          "q3": 324.3333333333333,
+          "median": 243.0
+        },
+        "scale": {
+          "label": "규모",
+          "unit": "세대",
+          "value": 412.0,
+          "verdict": "con",
+          "quantText": "412세대 규모로 동 평균 714세대보다 적음",
+          "qual": null,
+          "n": 14,
+          "rank": 13,
+          "dongAvg": 714.1428571428571,
+          "q1": 499.5,
+          "q3": 820.0,
+          "median": 721.0
+        },
+        "age": {
+          "label": "노후도",
+          "unit": "년",
+          "value": 2023.0,
+          "verdict": "pro",
+          "quantText": "2023년 준공으로 동 평균 2016년보다 높음",
+          "qual": null,
+          "n": 14,
+          "rank": 1,
+          "dongAvg": 2016.0,
+          "q1": 2014.0,
+          "q3": 2016.75,
+          "median": 2016.0
+        },
+        "amenity": {
+          "label": "교통·생활편의",
+          "unit": "개",
+          "value": 5.0,
+          "verdict": "none",
+          "quantText": "기본정보상 편의·교육시설 5개 항목으로 동 평균 7개보다 적음",
+          "qual": null,
+          "n": 14,
+          "rank": 10,
+          "dongAvg": 7.357142857142857,
+          "q1": 5.0,
+          "q3": 9.0,
+          "median": 7.5
+        }
+      },
+      "review": {
+        "collected": 0,
+        "ad": 0,
+        "review": 0,
+        "unrelated": 0,
+        "evidence": 0
+      }
+    },
+    {
+      "kaptCode": "MOCK0011",
+      "name": "예시 11단지",
+      "addr": "전라남도 나주시 빛가람동 170",
+      "roadAddr": "전라남도 나주시 빛가람로 130",
+      "lat": 35.026036,
+      "lng": 126.779764,
+      "info": {
+        "builtYear": 2013,
+        "useApproveYmd": "20130615",
+        "houseCnt": 754.0,
+        "dongCnt": 12.0,
+        "heatType": "지역난방",
+        "manageType": "자치관리",
+        "securityType": "위탁관리",
+        "builder": "예시건설",
+        "manageArea": 64322.8,
+        "parkingTotal": 1018,
+        "guards": 2.0,
+        "cctv": 181.0,
+        "convenient": "슈퍼마켓, 어린이집, 경로당, 도서관",
+        "education": "초등학교, 중학교, 학원가",
+        "bus": "5분 이내",
+        "subway": "",
+        "monthlyCommonFee": 74292834,
+        "feeBaseMonth": "202606",
+        "recentTrade": {
+          "amount": 28868.0,
+          "area": 59.94,
+          "floor": 20.0,
+          "ym": "202604",
+          "count": 8,
+          "medianAmount": 31225.0
+        }
+      },
+      "aspects": {
+        "parking": {
+          "label": "주차",
+          "unit": "대/세대",
+          "value": 1.35,
+          "verdict": "none",
+          "quantText": "세대당 주차 1.35대로 동 평균 1.29대보다 많음",
+          "qual": null,
+          "n": 14,
+          "rank": 7,
+          "dongAvg": 1.292142857142857,
+          "q1": 1.02,
+          "q3": 1.5625,
+          "median": 1.35
+        },
+        "fee": {
+          "label": "관리비",
+          "unit": "원/㎡",
+          "value": 1155.0,
+          "verdict": "none",
+          "quantText": "㎡당 공용관리비 1,155원으로 동 평균 1,208원보다 낮음",
+          "qual": null,
+          "n": 12,
+          "rank": 6,
+          "dongAvg": 1208.25,
+          "q1": 1048.75,
+          "q3": 1363.5,
+          "median": 1183.0
+        },
+        "security": {
+          "label": "보안·관리",
+          "unit": "세대/경비원",
+          "value": 377.0,
+          "verdict": "con",
+          "quantText": "경비원 1명당 377세대로 동 평균 259세대보다 많음",
+          "qual": null,
+          "n": 14,
+          "rank": 14,
+          "dongAvg": 258.62857142857143,
+          "q1": 206.0,
+          "q3": 324.3333333333333,
+          "median": 243.0
+        },
+        "scale": {
+          "label": "규모",
+          "unit": "세대",
+          "value": 754.0,
+          "verdict": "none",
+          "quantText": "754세대 규모로 동 평균 714세대보다 많음",
+          "qual": null,
+          "n": 14,
+          "rank": 7,
+          "dongAvg": 714.1428571428571,
+          "q1": 499.5,
+          "q3": 820.0,
+          "median": 721.0
+        },
+        "age": {
+          "label": "노후도",
+          "unit": "년",
+          "value": 2013.0,
+          "verdict": "con",
+          "quantText": "2013년 준공으로 동 평균 2016년보다 낮음",
+          "qual": null,
+          "n": 14,
+          "rank": 12,
+          "dongAvg": 2016.0,
+          "q1": 2014.0,
+          "q3": 2016.75,
+          "median": 2016.0
+        },
+        "amenity": {
+          "label": "교통·생활편의",
+          "unit": "개",
+          "value": 11.0,
+          "verdict": "pro",
+          "quantText": "기본정보상 편의·교육시설 11개 항목으로 동 평균 7개보다 많음",
+          "qual": null,
+          "n": 14,
+          "rank": 2,
+          "dongAvg": 7.357142857142857,
+          "q1": 5.0,
+          "q3": 9.0,
+          "median": 7.5
+        }
+      },
+      "review": {
+        "collected": 0,
+        "ad": 0,
+        "review": 0,
+        "unrelated": 0,
+        "evidence": 0
+      }
+    },
+    {
+      "kaptCode": "MOCK0012",
+      "name": "예시 12단지",
+      "addr": "전라남도 나주시 빛가람동 177",
+      "roadAddr": "전라남도 나주시 빛가람로 141",
+      "lat": 35.024796,
+      "lng": 126.774361,
+      "info": {
+        "builtYear": 2016,
+        "useApproveYmd": "20160115",
+        "houseCnt": 486.0,
+        "dongCnt": 9.0,
+        "heatType": "지역난방",
+        "manageType": "위탁관리",
+        "securityType": "자체관리",
+        "builder": "예시건설",
+        "manageArea": 42539.9,
+        "parkingTotal": 403,
+        "guards": 2.0,
+        "cctv": 97.0,
+        "convenient": "슈퍼마켓, 어린이집, 경로당, 도서관",
+        "education": "초등학교, 중학교, 학원가",
+        "bus": "5분 이내",
+        "subway": "",
+        "monthlyCommonFee": 46113252,
+        "feeBaseMonth": "202606",
+        "recentTrade": {
+          "amount": 27906.0,
+          "area": 84.97,
+          "floor": 20.0,
+          "ym": "202606",
+          "count": 4,
+          "medianAmount": 24939.0
+        }
+      },
+      "aspects": {
+        "parking": {
+          "label": "주차",
+          "unit": "대/세대",
+          "value": 0.83,
+          "verdict": "con",
+          "quantText": "세대당 주차 0.83대로 동 평균 1.29대보다 적음",
+          "qual": null,
+          "n": 14,
+          "rank": 14,
+          "dongAvg": 1.292142857142857,
+          "q1": 1.02,
+          "q3": 1.5625,
+          "median": 1.35
+        },
+        "fee": {
+          "label": "관리비",
+          "unit": "원/㎡",
+          "value": 1084.0,
+          "verdict": "none",
+          "quantText": "㎡당 공용관리비 1,084원으로 동 평균 1,208원보다 낮음",
+          "qual": null,
+          "n": 12,
+          "rank": 5,
+          "dongAvg": 1208.25,
+          "q1": 1048.75,
+          "q3": 1363.5,
+          "median": 1183.0
+        },
+        "security": {
+          "label": "보안·관리",
+          "unit": "세대/경비원",
+          "value": 243.0,
+          "verdict": "none",
+          "quantText": "경비원 1명당 243세대로 동 평균 259세대보다 적음",
+          "qual": null,
+          "n": 14,
+          "rank": 7,
+          "dongAvg": 258.62857142857143,
+          "q1": 206.0,
+          "q3": 324.3333333333333,
+          "median": 243.0
+        },
+        "scale": {
+          "label": "규모",
+          "unit": "세대",
+          "value": 486.0,
+          "verdict": "con",
+          "quantText": "486세대 규모로 동 평균 714세대보다 적음",
+          "qual": null,
+          "n": 14,
+          "rank": 11,
+          "dongAvg": 714.1428571428571,
+          "q1": 499.5,
+          "q3": 820.0,
+          "median": 721.0
+        },
+        "age": {
+          "label": "노후도",
+          "unit": "년",
+          "value": 2016.0,
+          "verdict": "none",
+          "quantText": "2016년 준공으로 동 평균 2016년보다 같음",
+          "qual": null,
+          "n": 14,
+          "rank": 5,
+          "dongAvg": 2016.0,
+          "q1": 2014.0,
+          "q3": 2016.75,
+          "median": 2016.0
+        },
+        "amenity": {
+          "label": "교통·생활편의",
+          "unit": "개",
+          "value": 4.0,
+          "verdict": "con",
+          "quantText": "기본정보상 편의·교육시설 4개 항목으로 동 평균 7개보다 적음",
+          "qual": null,
+          "n": 14,
+          "rank": 13,
+          "dongAvg": 7.357142857142857,
+          "q1": 5.0,
+          "q3": 9.0,
+          "median": 7.5
+        }
+      },
+      "review": {
+        "collected": 0,
+        "ad": 0,
+        "review": 0,
+        "unrelated": 0,
+        "evidence": 0
+      }
+    },
+    {
+      "kaptCode": "MOCK0013",
+      "name": "예시 13단지",
+      "addr": "전라남도 나주시 빛가람동 184",
+      "roadAddr": "전라남도 나주시 빛가람로 152",
+      "lat": 35.016301,
+      "lng": 126.775453,
+      "info": {
+        "builtYear": 2019,
+        "useApproveYmd": "20190615",
+        "houseCnt": 820.0,
+        "dongCnt": 12.0,
+        "heatType": "지역난방",
+        "manageType": "위탁관리",
+        "securityType": "자체관리",
+        "builder": "예시건설",
+        "manageArea": 80771.2,
+        "parkingTotal": 763,
+        "guards": 3.0,
+        "cctv": 126.0,
+        "convenient": "슈퍼마켓, 어린이집, 경로당, 도서관",
+        "education": "초등학교, 중학교, 학원가",
+        "bus": "5분 이내",
+        "subway": "",
+        "monthlyCommonFee": 115341274,
+        "feeBaseMonth": "202606",
+        "recentTrade": {
+          "amount": 37706.0,
+          "area": 59.94,
+          "floor": 18.0,
+          "ym": "202604",
+          "count": 7,
+          "medianAmount": 34482.0
+        }
+      },
+      "aspects": {
+        "parking": {
+          "label": "주차",
+          "unit": "대/세대",
+          "value": 0.93,
+          "verdict": "con",
+          "quantText": "세대당 주차 0.93대로 동 평균 1.29대보다 적음",
+          "qual": null,
+          "n": 14,
+          "rank": 12,
+          "dongAvg": 1.292142857142857,
+          "q1": 1.02,
+          "q3": 1.5625,
+          "median": 1.35
+        },
+        "fee": {
+          "label": "관리비",
+          "unit": "원/㎡",
+          "value": 1428.0,
+          "verdict": "con",
+          "quantText": "㎡당 공용관리비 1,428원으로 동 평균 1,208원보다 높음",
+          "qual": null,
+          "n": 12,
+          "rank": 10,
+          "dongAvg": 1208.25,
+          "q1": 1048.75,
+          "q3": 1363.5,
+          "median": 1183.0
+        },
+        "security": {
+          "label": "보안·관리",
+          "unit": "세대/경비원",
+          "value": 273.3333333333333,
+          "verdict": "none",
+          "quantText": "경비원 1명당 273세대로 동 평균 259세대보다 많음",
+          "qual": null,
+          "n": 14,
+          "rank": 10,
+          "dongAvg": 258.62857142857143,
+          "q1": 206.0,
+          "q3": 324.3333333333333,
+          "median": 243.0
+        },
+        "scale": {
+          "label": "규모",
+          "unit": "세대",
+          "value": 820.0,
+          "verdict": "none",
+          "quantText": "820세대 규모로 동 평균 714세대보다 많음",
+          "qual": null,
+          "n": 14,
+          "rank": 4,
+          "dongAvg": 714.1428571428571,
+          "q1": 499.5,
+          "q3": 820.0,
+          "median": 721.0
+        },
+        "age": {
+          "label": "노후도",
+          "unit": "년",
+          "value": 2019.0,
+          "verdict": "pro",
+          "quantText": "2019년 준공으로 동 평균 2016년보다 높음",
+          "qual": null,
+          "n": 14,
+          "rank": 2,
+          "dongAvg": 2016.0,
+          "q1": 2014.0,
+          "q3": 2016.75,
+          "median": 2016.0
+        },
+        "amenity": {
+          "label": "교통·생활편의",
+          "unit": "개",
+          "value": 5.0,
+          "verdict": "none",
+          "quantText": "기본정보상 편의·교육시설 5개 항목으로 동 평균 7개보다 적음",
+          "qual": null,
+          "n": 14,
+          "rank": 10,
+          "dongAvg": 7.357142857142857,
+          "q1": 5.0,
+          "q3": 9.0,
+          "median": 7.5
+        }
+      },
+      "review": {
+        "collected": 0,
+        "ad": 0,
+        "review": 0,
+        "unrelated": 0,
+        "evidence": 0
+      }
+    },
+    {
+      "kaptCode": "MOCK0014",
+      "name": "예시 14단지",
+      "addr": "전라남도 나주시 빛가람동 191",
+      "roadAddr": "전라남도 나주시 빛가람로 163",
+      "lat": null,
+      "lng": null,
+      "info": {
+        "builtYear": 2013,
+        "useApproveYmd": "20130315",
+        "houseCnt": 1024.0,
+        "dongCnt": 14.0,
+        "heatType": "개별난방",
+        "manageType": "자치관리",
+        "securityType": "위탁관리",
+        "builder": "예시건설",
+        "manageArea": 104128.9,
+        "parkingTotal": 1249,
+        "guards": 5.0,
+        "cctv": 210.0,
+        "convenient": "슈퍼마켓, 어린이집, 경로당, 도서관",
+        "education": "초등학교, 중학교, 학원가",
+        "bus": "5분 이내",
+        "subway": "",
+        "monthlyCommonFee": 152236452,
+        "feeBaseMonth": "202606",
+        "recentTrade": {
+          "amount": 35095.0,
+          "area": 59.94,
+          "floor": 6.0,
+          "ym": "202605",
+          "count": 24,
+          "medianAmount": 24153.0
+        }
+      },
+      "aspects": {
+        "parking": {
+          "label": "주차",
+          "unit": "대/세대",
+          "value": 1.22,
+          "verdict": "none",
+          "quantText": "세대당 주차 1.22대로 동 평균 1.29대보다 적음",
+          "qual": null,
+          "n": 14,
+          "rank": 9,
+          "dongAvg": 1.292142857142857,
+          "q1": 1.02,
+          "q3": 1.5625,
+          "median": 1.35
+        },
+        "fee": {
+          "label": "관리비",
+          "unit": "원/㎡",
+          "value": 1462.0,
+          "verdict": "con",
+          "quantText": "㎡당 공용관리비 1,462원으로 동 평균 1,208원보다 높음",
+          "qual": null,
+          "n": 12,
+          "rank": 12,
+          "dongAvg": 1208.25,
+          "q1": 1048.75,
+          "q3": 1363.5,
+          "median": 1183.0
+        },
+        "security": {
+          "label": "보안·관리",
+          "unit": "세대/경비원",
+          "value": 204.8,
+          "verdict": "pro",
+          "quantText": "경비원 1명당 205세대로 동 평균 259세대보다 적음",
+          "qual": null,
+          "n": 14,
+          "rank": 2,
+          "dongAvg": 258.62857142857143,
+          "q1": 206.0,
+          "q3": 324.3333333333333,
+          "median": 243.0
+        },
+        "scale": {
+          "label": "규모",
+          "unit": "세대",
+          "value": 1024.0,
+          "verdict": "pro",
+          "quantText": "1,024세대 규모로 동 평균 714세대보다 많음",
+          "qual": null,
+          "n": 14,
+          "rank": 1,
+          "dongAvg": 714.1428571428571,
+          "q1": 499.5,
+          "q3": 820.0,
+          "median": 721.0
+        },
+        "age": {
+          "label": "노후도",
+          "unit": "년",
+          "value": 2013.0,
+          "verdict": "con",
+          "quantText": "2013년 준공으로 동 평균 2016년보다 낮음",
+          "qual": null,
+          "n": 14,
+          "rank": 12,
+          "dongAvg": 2016.0,
+          "q1": 2014.0,
+          "q3": 2016.75,
+          "median": 2016.0
+        },
+        "amenity": {
+          "label": "교통·생활편의",
+          "unit": "개",
+          "value": 4.0,
+          "verdict": "con",
+          "quantText": "기본정보상 편의·교육시설 4개 항목으로 동 평균 7개보다 적음",
+          "qual": null,
+          "n": 14,
+          "rank": 13,
+          "dongAvg": 7.357142857142857,
+          "q1": 5.0,
+          "q3": 9.0,
+          "median": 7.5
+        }
+      },
+      "review": {
+        "collected": 0,
+        "ad": 0,
+        "review": 0,
+        "unrelated": 0,
+        "evidence": 0
+      }
+    }
+  ]
+}
