@@ -50,7 +50,9 @@ load_env()
 # Windows 콘솔(cp949)에서 한글/㎡ 출력이 깨지거나 예외가 나지 않도록 UTF-8 로 고정
 for _stream in (sys.stdout, sys.stderr):
     try:
-        _stream.reconfigure(encoding="utf-8", errors="replace")
+        # line_buffering=True 를 같이 준다. 이게 없으면 출력을 파일로 넘겼을 때
+        # 블록 버퍼링이 걸려, 배치가 도는 내내 로그가 0바이트로 보인다.
+        _stream.reconfigure(encoding="utf-8", errors="replace", line_buffering=True)
     except Exception:
         pass
 

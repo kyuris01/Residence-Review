@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T14:27:36+09:00",
+  "generatedAt": "2026-09-03T14:45:48+09:00",
   "region": {
     "sido": "전남광주통합특별시",
     "sigungu": "나주시",
@@ -121,7 +121,7 @@
     "endpoints": {},
     "rule": "동 내 단지 분포에서 상위 25%(Q3) 밖이면 장점, 하위 25%(Q1) 밖이면 단점. 중간 50%는 카드를 만들지 않음.",
     "qual": "Tavily 검색 API(카페·블로그·웹), 유튜브 Data API(댓글)",
-    "llm": null
+    "llm": "claude-opus-5"
   },
   "complexes": [
     {
@@ -351,7 +351,31 @@
           "value": 2.0,
           "verdict": "none",
           "quantText": "기본정보상 편의·교육시설 2개 항목으로 동 평균 4개보다 적음",
-          "qual": null,
+          "qual": {
+            "text": "일부 후기에서 주변 편의시설과 교통이 편리하고 단지 내 헬스장·도서관 등이 있다는 언급이 있음",
+            "polarity": "pro",
+            "evidenceCount": 3,
+            "sources": [
+              {
+                "title": "나주시 빛가람동 광주전남공동혁신도시빛가람대방엘리움로얄카운티 ...",
+                "url": "https://realty.daangn.com/complexes/12167162",
+                "source": "review_platform",
+                "date": ""
+              },
+              {
+                "title": "나주시 빛가람동 광주전남공동혁신도시빛가람대방엘리움로얄카운티 ...",
+                "url": "https://realty.daangn.com/complexes/12167162/topics/management-fee",
+                "source": "review_platform",
+                "date": ""
+              },
+              {
+                "title": "나주시 빛가람동 광주전남공동혁신도시빛가람대방엘리움로얄카운티 ...",
+                "url": "https://realty.daangn.com/complexes/12167162/reviews/119225",
+                "source": "review_platform",
+                "date": ""
+              }
+            ]
+          },
           "n": 19,
           "rank": 11,
           "dongAvg": 3.8421052631578947,
@@ -361,11 +385,11 @@
         }
       },
       "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
-        "evidence": 0
+        "collected": 10,
+        "ad": 3,
+        "review": 3,
+        "unrelated": 4,
+        "evidence": 3
       }
     },
     {
@@ -403,7 +427,37 @@
           "value": 1.7318840579710144,
           "verdict": "pro",
           "quantText": "세대당 주차 1.73대로 동 평균 1.20대보다 많음",
-          "qual": null,
+          "qual": {
+            "text": "일부 후기에서 늦은 저녁에도 주차 걱정이 없고 공간이 충분하다는 언급이 있음",
+            "polarity": "pro",
+            "evidenceCount": 4,
+            "sources": [
+              {
+                "title": "나주시 빛가람동 대방엘리움 로얄카운티 1차 살아본 후기 - 당근부동산",
+                "url": "https://realty.daangn.com/complexes/12167161/reviews/305641",
+                "source": "review_platform",
+                "date": ""
+              },
+              {
+                "title": "광주전남공동혁신도시빛가람대방엘리움로얄카운티1차 - 호갱노노",
+                "url": "https://hogangnono.com/community/apts/apts-7363885",
+                "source": "review_platform",
+                "date": ""
+              },
+              {
+                "title": "빛가람동 광주전남공동혁신도시빛가람대방엘리움로얄카운티1차",
+                "url": "https://hogangnono.com/apt/aOo8a",
+                "source": "review_platform",
+                "date": ""
+              },
+              {
+                "title": "나주시 빛가람동 광주전남공동혁신도시빛가람대방엘리움로얄카운티 ...",
+                "url": "https://realty.daangn.com/complexes/12167161/reviews/287536",
+                "source": "review_platform",
+                "date": ""
+              }
+            ]
+          },
           "n": 19,
           "rank": 1,
           "dongAvg": 1.1967794195790147,
@@ -483,11 +537,11 @@
         }
       },
       "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
-        "evidence": 0
+        "collected": 13,
+        "ad": 7,
+        "review": 4,
+        "unrelated": 2,
+        "evidence": 4
       }
     },
     {
@@ -605,10 +659,10 @@
         }
       },
       "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
+        "collected": 5,
+        "ad": 2,
+        "review": 2,
+        "unrelated": 1,
         "evidence": 0
       }
     },
@@ -727,10 +781,10 @@
         }
       },
       "review": {
-        "collected": 0,
-        "ad": 0,
+        "collected": 5,
+        "ad": 4,
         "review": 0,
-        "unrelated": 0,
+        "unrelated": 1,
         "evidence": 0
       }
     },
@@ -849,10 +903,10 @@
         }
       },
       "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
+        "collected": 17,
+        "ad": 11,
+        "review": 1,
+        "unrelated": 5,
         "evidence": 0
       }
     },
@@ -971,10 +1025,10 @@
         }
       },
       "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
+        "collected": 17,
+        "ad": 9,
+        "review": 1,
+        "unrelated": 7,
         "evidence": 0
       }
     },
@@ -1093,10 +1147,10 @@
         }
       },
       "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
+        "collected": 3,
+        "ad": 1,
+        "review": 1,
+        "unrelated": 1,
         "evidence": 0
       }
     },
@@ -1215,9 +1269,9 @@
         }
       },
       "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
+        "collected": 10,
+        "ad": 8,
+        "review": 2,
         "unrelated": 0,
         "evidence": 0
       }
@@ -1327,7 +1381,37 @@
           "value": 4.0,
           "verdict": "none",
           "quantText": "기본정보상 편의·교육시설 4개 항목으로 동 평균 4개보다 많음",
-          "qual": null,
+          "qual": {
+            "text": "일부 후기에서 학교·마트는 가깝지만 병원과 상권은 멀다는 언급이 있음",
+            "polarity": "mixed",
+            "evidenceCount": 4,
+            "sources": [
+              {
+                "title": "'빛가람 LH6단지 아파트' (광주시 나주시 빛가람동 824) 살아본 후기, 이사 후기, 이사 견적, 관리비·주차·교통 - 짐싸",
+                "url": "https://www.zimssa.com/real-estate/4617013400108240000000001",
+                "source": "review_platform",
+                "date": ""
+              },
+              {
+                "title": "나주시 빛가람동 빛가람LH6단지 살아본 후기 - 당근부동산",
+                "url": "https://realty.daangn.com/complexes/12167038/reviews/126134",
+                "source": "review_platform",
+                "date": ""
+              },
+              {
+                "title": "나주시 빛가람동 빛가람LH6단지 살아본 후기 - 당근부동산",
+                "url": "https://realty.daangn.com/complexes/12167038/reviews/301167",
+                "source": "review_platform",
+                "date": ""
+              },
+              {
+                "title": "전남 나주시 빛가람동 824 빛가람 LH6단지 아파트(월정3길 25) 거주 ...",
+                "url": "https://tenant.zaritalk.com/real-residence-review/residence/building/1680526",
+                "source": "review_platform",
+                "date": ""
+              }
+            ]
+          },
           "n": 19,
           "rank": 5,
           "dongAvg": 3.8421052631578947,
@@ -1337,11 +1421,11 @@
         }
       },
       "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
-        "evidence": 0
+        "collected": 15,
+        "ad": 8,
+        "review": 4,
+        "unrelated": 3,
+        "evidence": 4
       }
     },
     {
@@ -1459,8 +1543,8 @@
         }
       },
       "review": {
-        "collected": 0,
-        "ad": 0,
+        "collected": 4,
+        "ad": 4,
         "review": 0,
         "unrelated": 0,
         "evidence": 0
@@ -1581,8 +1665,8 @@
         }
       },
       "review": {
-        "collected": 0,
-        "ad": 0,
+        "collected": 3,
+        "ad": 3,
         "review": 0,
         "unrelated": 0,
         "evidence": 0
@@ -1703,9 +1787,9 @@
         }
       },
       "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
+        "collected": 7,
+        "ad": 5,
+        "review": 2,
         "unrelated": 0,
         "evidence": 0
       }
@@ -1825,10 +1909,10 @@
         }
       },
       "review": {
-        "collected": 0,
-        "ad": 0,
+        "collected": 6,
+        "ad": 5,
         "review": 0,
-        "unrelated": 0,
+        "unrelated": 1,
         "evidence": 0
       }
     },
@@ -1867,7 +1951,31 @@
           "value": 1.215213358070501,
           "verdict": "none",
           "quantText": "세대당 주차 1.22대로 동 평균 1.20대보다 많음",
-          "qual": null,
+          "qual": {
+            "text": "일부 후기에서 주차 자리가 여유로워 편한 편이라는 언급이 있음",
+            "polarity": "pro",
+            "evidenceCount": 3,
+            "sources": [
+              {
+                "title": "빛가람우미린 이야기 | 커뮤니티좋고 주차널널하고 살기좋습니다 가성 ...",
+                "url": "https://hogangnono.com/community/apts-6960641",
+                "source": "review_platform",
+                "date": ""
+              },
+              {
+                "title": "빛가람우미린 이야기 | 채광 좋고 주차자리 많음 - 호갱노노",
+                "url": "https://www.hogengnono.com/community/apts-7433921",
+                "source": "review_platform",
+                "date": ""
+              },
+              {
+                "title": "나주시 빛가람동 빛가람우미린 주차 후기 3개 | 당근부동산",
+                "url": "https://realty.daangn.com/complexes/12167376/topics/parking",
+                "source": "review_platform",
+                "date": ""
+              }
+            ]
+          },
           "n": 19,
           "rank": 11,
           "dongAvg": 1.1967794195790147,
@@ -1937,7 +2045,43 @@
           "value": 3.0,
           "verdict": "none",
           "quantText": "기본정보상 편의·교육시설 3개 항목으로 동 평균 4개보다 적음",
-          "qual": null,
+          "qual": {
+            "text": "일부 후기에서 교통·편의시설은 좋으나 학교·상가 접근성은 아쉽다는 언급이 있음",
+            "polarity": "mixed",
+            "evidenceCount": 5,
+            "sources": [
+              {
+                "title": "전남 나주시 빛가람동 135 빛가람우미린아파트(한빛로 61) 거주 후기, 실거래가, 시세 | 자리톡",
+                "url": "https://tenant.zaritalk.com/real-residence-review/residence/building/11702",
+                "source": "review_platform",
+                "date": ""
+              },
+              {
+                "title": "나주시 빛가람동 빛가람우미린 주차 후기 3개 | 당근부동산",
+                "url": "https://realty.daangn.com/complexes/12167376/topics/parking",
+                "source": "review_platform",
+                "date": ""
+              },
+              {
+                "title": "나주시 빛가람동 빛가람우미린 살아본 후기 - 당근부동산",
+                "url": "https://realty.daangn.com/complexes/12167376/reviews/388724",
+                "source": "review_platform",
+                "date": ""
+              },
+              {
+                "title": "빛가람우미린아파트 - 자리톡",
+                "url": "https://tenant.zaritalk.com/real-residence-review/residence/building/1870819",
+                "source": "review_platform",
+                "date": ""
+              },
+              {
+                "title": "빛가람우미린 이야기 | 조용하고 단지내 커뮤니티시설이 참 좋아요 ...",
+                "url": "https://hogangnono.com/community/apts/apts-6274783",
+                "source": "review_platform",
+                "date": ""
+              }
+            ]
+          },
           "n": 19,
           "rank": 7,
           "dongAvg": 3.8421052631578947,
@@ -1947,11 +2091,11 @@
         }
       },
       "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
-        "evidence": 0
+        "collected": 28,
+        "ad": 17,
+        "review": 9,
+        "unrelated": 2,
+        "evidence": 8
       }
     },
     {
@@ -2069,8 +2213,8 @@
         }
       },
       "review": {
-        "collected": 0,
-        "ad": 0,
+        "collected": 2,
+        "ad": 2,
         "review": 0,
         "unrelated": 0,
         "evidence": 0
@@ -2191,9 +2335,9 @@
         }
       },
       "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
+        "collected": 11,
+        "ad": 9,
+        "review": 2,
         "unrelated": 0,
         "evidence": 0
       }
@@ -2299,7 +2443,31 @@
           "value": 1.0,
           "verdict": "con",
           "quantText": "기본정보상 편의·교육시설 1개 항목으로 동 평균 4개보다 적음",
-          "qual": null,
+          "qual": {
+            "text": "일부 후기에서 초등학교와 공원이 가까워 아이 키우기 좋다는 언급이 있음",
+            "polarity": "pro",
+            "evidenceCount": 3,
+            "sources": [
+              {
+                "title": "나주시 빛가람동 센트럴레이크에 살아본 이웃들의 후기 - 당근부동산",
+                "url": "https://realty.daangn.com/complexes/12167160/reviews/475266",
+                "source": "review_platform",
+                "date": ""
+              },
+              {
+                "title": "'센트럴레이크' (전라남도 나주시 빛가람동 381) 후기 - 근처에 ... - 짐싸",
+                "url": "https://www.zimssa.com/real-estate/4617013400103810000000001/review/4412",
+                "source": "review_platform",
+                "date": ""
+              },
+              {
+                "title": "나주시 빛가람동 센트럴레이크 살아본 후기 - 당근부동산",
+                "url": "https://realty.daangn.com/complexes/12167160/reviews/260168",
+                "source": "review_platform",
+                "date": ""
+              }
+            ]
+          },
           "n": 19,
           "rank": 16,
           "dongAvg": 3.8421052631578947,
@@ -2309,11 +2477,11 @@
         }
       },
       "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
-        "evidence": 0
+        "collected": 10,
+        "ad": 6,
+        "review": 3,
+        "unrelated": 1,
+        "evidence": 3
       }
     },
     {
@@ -2431,21 +2599,325 @@
         }
       },
       "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
+        "collected": 7,
+        "ad": 4,
+        "review": 2,
+        "unrelated": 1,
         "evidence": 0
       }
     }
   ],
-  "dongSummary": null,
-  "reviewStats": {
-    "collected": 0,
-    "ad": 0,
-    "review": 0,
-    "unrelated": 0,
-    "evidence": 0
+  "dongSummary": {
+    "collected": 120,
+    "items": [
+      {
+        "key": "parking",
+        "label": "주차",
+        "text": "일부 후기에서 지하주차장이 넉넉하다는 언급과 밤 시간대 자리 부족 언급이 함께 있음",
+        "polarity": "mixed",
+        "evidenceCount": 9,
+        "sources": [
+          {
+            "title": "전남 나주시 빛가람동 558 영무예다음 아파트(월정1길 20) 거주 후기 ...",
+            "url": "https://tenant.zaritalk.com/real-residence-review/residence/building/1652232",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "나주시 빛가람동 부영사랑으로2단지아파트 주차 후기 8개 | 당근부동산",
+            "url": "https://realty.daangn.com/complexes/12167568/topics/parking",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "빛가람 LH5단지 아파트 - 자리톡",
+            "url": "https://tenant.zaritalk.com/real-residence-review/residence/building/1675702",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "전남 나주시 빛가람동 325 루멘하임(그린로 328) 거주 후기, 실거래가 ...",
+            "url": "https://tenant.zaritalk.com/real-residence-review/residence/building/68259",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "나주시 빛가람동 루멘하임 - 집품",
+            "url": "https://zippoom.com/%EB%B6%80%EB%8F%99%EC%82%B0/%EC%A0%84%EB%82%A8-%EB%82%98%EC%A3%BC%EC%8B%9C-%EB%B9%9B%EA%B0%80%EB%9E%8C%EB%8F%99-%EB%A3%A8%EB%A9%98%ED%95%98%EC%9E%84/dbltiu",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "나주시 빛가람동 루멘하임 주차 후기 11개 - 당근부동산",
+            "url": "https://realty.daangn.com/complexes/12167532/topics/parking",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "혁신도시 내 주차 편한 아파트 있나요? | 빛가람동 | 당근 동네생활",
+            "url": "https://www.daangn.com/kr/community/%ED%98%81%EC%8B%A0%EB%8F%84%EC%8B%9C-%EB%82%B4-%EC%A3%BC%EC%B0%A8-%ED%8E%B8%ED%95%9C-%EC%95%84%ED%8C%8C%ED%8A%B8-%EC%9E%88%EB%82%98%EC%9A%94-di5nhoo1cxdm",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "'빛가람동 루멘하임' 실거래가·시세·2년뒤 가격예측 분석 - 리치고",
+            "url": "https://m.richgo.ai/realty/danji/a3ndVgU",
+            "source": "web",
+            "date": ""
+          },
+          {
+            "title": "나주시 빛가람동 나주빛가람LH5단지 살아본 후기 - 당근부동산",
+            "url": "https://realty.daangn.com/complexes/12167051/reviews/316804",
+            "source": "review_platform",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "key": "fee",
+        "label": "관리비",
+        "text": "일부 후기에서 전용 85㎡ 기준 월 관리비가 26만원 수준이라는 언급이 있음",
+        "polarity": "mixed",
+        "evidenceCount": 4,
+        "sources": [
+          {
+            "title": "전남 나주시 빛가람동 558 영무예다음 아파트(월정1길 20) 거주 후기 ...",
+            "url": "https://tenant.zaritalk.com/real-residence-review/residence/building/1652232",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "나주시 빛가람동 이노시티애시앙1단지 주차 후기 7개 | 당근부동산",
+            "url": "https://realty.daangn.com/complexes/12167617/topics/parking",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "빛가람 LH5단지 아파트 - 자리톡",
+            "url": "https://tenant.zaritalk.com/real-residence-review/residence/building/1675702",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "나주시 빛가람동 루멘하임 주차 후기 11개 - 당근부동산",
+            "url": "https://realty.daangn.com/complexes/12167532/topics/parking",
+            "source": "review_platform",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "key": "security",
+        "label": "보안·관리",
+        "text": "일부 후기에서 경비원 관리와 단지 청소 상태가 양호하다는 언급이 있음",
+        "polarity": "pro",
+        "evidenceCount": 5,
+        "sources": [
+          {
+            "title": "나주시 빛가람동 이노시티애시앙1단지 살아본 후기 — \"뷰가좋고 산책로가 잘 되어있고 아파트 건물사이가 넓어…\" | 당근부동산",
+            "url": "https://realty.daangn.com/complexes/12167617/reviews/5772",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "나주시 빛가람동 대광로제비앙 - 집품",
+            "url": "https://zippoom.com/%EB%B6%80%EB%8F%99%EC%82%B0/%EC%A0%84%EB%82%A8-%EB%82%98%EC%A3%BC%EC%8B%9C-%EB%B9%9B%EA%B0%80%EB%9E%8C%EB%8F%99-%EB%8C%80%EA%B4%91%EB%A1%9C%EC%A0%9C%EB%B9%84%EC%95%99/txpojo",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "'빛가람동 센트럴레이크'의 실거래가, 시세, 매물, 주변정보 | 아파트는 호갱노노",
+            "url": "https://hogangnono.com/apt/9Thfb",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "나주시 빛가람동 부영사랑으로2단지아파트 살아본 후기 - 당근부동산",
+            "url": "https://realty.daangn.com/complexes/12167568/reviews/309254",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "나주시 빛가람동 부영사랑으로2단지아파트 주차 후기 8개 | 당근부동산",
+            "url": "https://realty.daangn.com/complexes/12167568/topics/parking",
+            "source": "review_platform",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "key": "scale",
+        "label": "규모",
+        "text": "일부 후기에서 세대수가 많고 동간 거리가 넓다는 언급이 있음",
+        "polarity": "pro",
+        "evidenceCount": 7,
+        "sources": [
+          {
+            "title": "나주시 빛가람동 이노시티애시앙1단지 살아본 후기 — \"뷰가좋고 산책로가 잘 되어있고 아파트 건물사이가 넓어…\" | 당근부동산",
+            "url": "https://realty.daangn.com/complexes/12167617/reviews/5772",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "나주시 빛가람동 광주전남혁신도시영무예다음 주차 후기 5개",
+            "url": "https://realty.daangn.com/complexes/12167103/topics/parking",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "나주시 빛가람동 전남혁신도시사랑으로부영3단지 - 집품",
+            "url": "https://zippoom.com/%EB%B6%80%EB%8F%99%EC%82%B0/%EC%A0%84%EB%82%A8-%EB%82%98%EC%A3%BC%EC%8B%9C-%EB%B9%9B%EA%B0%80%EB%9E%8C%EB%8F%99-%EC%A0%84%EB%82%A8%ED%98%81%EC%8B%A0%EB%8F%84%EC%8B%9C%EC%82%AC%EB%9E%91%EC%9C%BC%EB%A1%9C%EB%B6%80%EC%98%813%EB%8B%A8%EC%A7%80/12hmt6",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "나주시 빛가람동 이노시티애시앙1단지 주차 후기 7개 | 당근부동산",
+            "url": "https://realty.daangn.com/complexes/12167617/topics/parking",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "광주전남공동혁신도시빛가람대방엘리움로얄카운티1차 - 호갱노노",
+            "url": "https://hogangnono.com/community/apts-5430230",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "나주시 빛가람동 루멘하임에 살아본 이웃들의 후기 - 당근부동산",
+            "url": "https://realty.daangn.com/complexes/12167532/reviews/388149",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "에듀캐슬 이야기 | 어느덧 4단지에서 보낸시간이 2년이 되어 가네요 ...",
+            "url": "https://hogangnono.com/community/apts-3049976",
+            "source": "review_platform",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "key": "age",
+        "label": "노후도",
+        "text": "일부 후기에서 하자가 거의 없다는 언급과 하자가 조금 있다는 언급이 함께 있음",
+        "polarity": "mixed",
+        "evidenceCount": 4,
+        "sources": [
+          {
+            "title": "나주시 빛가람동 이노시티애시앙1단지 주차 후기 7개 | 당근부동산",
+            "url": "https://realty.daangn.com/complexes/12167617/topics/parking",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "'빛가람동 센트럴레이크'의 실거래가, 시세, 매물, 주변정보 | 아파트는 호갱노노",
+            "url": "https://hogangnono.com/apt/9Thfb",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "나주시 빛가람동 광주전남혁신3단지 부영아파트 살아본 후기",
+            "url": "https://realty.daangn.com/complexes/12167632/reviews/200320",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "에듀캐슬 이야기 | 어느덧 4단지에서 보낸시간이 2년이 되어 가네요 ...",
+            "url": "https://hogangnono.com/community/apts-3049976",
+            "source": "review_platform",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "key": "amenity",
+        "label": "교통·생활편의",
+        "text": "일부 후기에서 학교·공원·마트 접근성은 좋지만 상권이 아쉽다는 언급이 있음",
+        "polarity": "mixed",
+        "evidenceCount": 12,
+        "sources": [
+          {
+            "title": "나주시 빛가람동 이노시티애시앙1단지 살아본 후기 — \"뷰가좋고 산책로가 잘 되어있고 아파트 건물사이가 넓어…\" | 당근부동산",
+            "url": "https://realty.daangn.com/complexes/12167617/reviews/5772",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "전남광주 나주시 빛가람동 3 빛가람중흥에스 - 클래스리버티 - 자리톡",
+            "url": "https://tenant.zaritalk.com/real-residence-review/residence/building/1878375",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "전남광주 나주시 빛가람동 600 대광로제비앙(그린로 153) 거주 후기 ...",
+            "url": "https://tenant.zaritalk.com/real-residence-review/residence/building/1862069",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "'빛가람동 센트럴레이크'의 실거래가, 시세, 매물, 주변정보 | 아파트는 호갱노노",
+            "url": "https://hogangnono.com/apt/9Thfb",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "나주시 빛가람동 대광로제비앙 실거래가·시세·매물 - 당근부동산",
+            "url": "https://realty.daangn.com/complexes/12167084",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "나주시 빛가람동 이노시티애시앙1단지 실거래가·시세·매물 - 당근부동산",
+            "url": "https://realty.daangn.com/complexes/12167617",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "나주시 빛가람동 광주전남혁신3단지 부영아파트 살아본 후기",
+            "url": "https://realty.daangn.com/complexes/12167632/reviews/200320",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "전남 나주시 빛가람동 551 빛가람 사랑으로 부영2단지 아파트(그린로 ...",
+            "url": "https://tenant.zaritalk.com/real-residence-review/residence/building/1661443",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "나주시 빛가람동 광주전남혁신도시영무예다음 주차 후기 5개",
+            "url": "https://realty.daangn.com/complexes/12167103/topics/parking",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "나주시 빛가람동 루멘하임 학군 후기 10개 - 당근부동산",
+            "url": "https://realty.daangn.com/complexes/12167532/topics/school-district",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "나주시 빛가람동 루멘하임 - 집품",
+            "url": "https://zippoom.com/%EB%B6%80%EB%8F%99%EC%82%B0/%EC%A0%84%EB%82%A8-%EB%82%98%EC%A3%BC%EC%8B%9C-%EB%B9%9B%EA%B0%80%EB%9E%8C%EB%8F%99-%EB%A3%A8%EB%A9%98%ED%95%98%EC%9E%84/dbltiu",
+            "source": "review_platform",
+            "date": ""
+          },
+          {
+            "title": "'빛가람동 루멘하임' 실거래가·시세·2년뒤 가격예측 분석 - 리치고",
+            "url": "https://m.richgo.ai/realty/danji/a3ndVgU",
+            "source": "web",
+            "date": ""
+          }
+        ]
+      }
+    ]
   },
-  "reviewCollectedAt": null
+  "reviewStats": {
+    "collected": 173,
+    "ad": 108,
+    "review": 36,
+    "unrelated": 29,
+    "evidence": 22
+  },
+  "reviewCollectedAt": "2026-09-03T14:41:19+09:00"
 }
