@@ -24,6 +24,7 @@ import time
 from datetime import datetime, timezone, timedelta
 
 import requests
+from concurrent.futures import ThreadPoolExecutor
 
 import config
 import kapt_api as api
@@ -132,6 +133,8 @@ def fetch_info(kapt_code: str) -> dict:
 
 # ---------------------------------------------------------------- 3) 공용관리비
 COST_EXCLUDE_KEYS = {"kaptCode", "kaptName", "searchDate", "resultCode", "resultMsg"}
+# 공공데이터포털 초당 호출 제한을 감안한 보수적인 동시 요청 수
+COST_WORKERS = 6
 
 
 def fetch_common_fee(kapt_code: str, months: list[str]):
@@ -147,25 +150,43 @@ def fetch_common_fee(kapt_code: str, months: list[str]):
     한 달 전체가 아직 공시되지 않은 경우를 대비해 여러 달을 시도하되, 항목이
     17개라 달마다 호출 비용이 크므로 무한정 거슬러 올라가지 않는다.
     """
-    for ym in months:
-        total = 0.0
-        got_any = False
-        for key, _stem, _label in config.COST_CATEGORIES:
-            try:
-                items = api.call("cost_" + key,
-                                 {"kaptCode": kapt_code, "searchDate": ym}, quiet=True)
-            except ApiUnavailable:
-                continue                 # 이 항목 오퍼레이션만 안 되는 경우 — 나머지는 계속
-            if not items:
+    def one_category(key: str, ym: str):
+        """
+        항목 하나의 그 달 합계.
+        '호출 실패'(None)와 '해당 항목이 원래 없음'(0.0)을 반드시 구분한다.
+        둘을 섞으면 네트워크가 한 번 튈 때마다 그 항목이 빠진 채로 총액이
+        계산돼, 같은 데이터인데도 실행할 때마다 관리비와 사분위 판정이 달라진다.
+        """
+        try:
+            items = api.call("cost_" + key,
+                             {"kaptCode": kapt_code, "searchDate": ym}, quiet=True)
+        except ApiUnavailable:
+            return None              # 호출 자체가 실패 — 총액에 포함하면 안 된다
+        if not items:
+            return 0.0               # 공시된 값이 없는 항목 (정상)
+        subtotal = 0.0
+        for k, v in items[0].items():
+            if k in COST_EXCLUDE_KEYS:
                 continue
-            got_any = True
-            for k, v in items[0].items():
-                if k in COST_EXCLUDE_KEYS:
-                    continue
-                f = num(v)
-                if f is not None and f >= 0:
-                    total += f
-        if got_any and total > 0:
+            f = num(v)
+            if f is not None and f >= 0:
+                subtotal += f
+        return subtotal
+
+    for ym in months:
+        # 17개 항목은 서로 독립적인 GET 이라 병렬로 부른다. 순차로 돌리면
+        # 단지 하나에 8초씩 걸려 전체가 몇 분이 된다.
+        with ThreadPoolExecutor(max_workers=COST_WORKERS) as pool:
+            results = list(pool.map(lambda kv: one_category(kv[0], ym),
+                                    [(c[0], ym) for c in config.COST_CATEGORIES]))
+        failed = [c[2] for c, r in zip(config.COST_CATEGORIES, results) if r is None]
+        if failed:
+            # 일부만 받아서 더하면 총액이 과소 계산된다. 그 달은 통째로 버린다.
+            print("\n    [경고] {0} 항목 호출 실패({1}) — 이 달은 건너뜁니다: {2}"
+                  .format(ym, len(failed), ", ".join(failed[:4])), end="")
+            continue
+        total = sum(results)
+        if total > 0:
             return total, ym
     return None, None
 
@@ -290,6 +311,20 @@ def _nominatim(query: str):
 
 
 def geocode(name: str, addr: str, road_addr: str = ""):
+    # 지오코딩은 Nominatim 이용 정책상 요청마다 1.1초를 쉬어야 해서, 캐시가 없으면
+    # 재실행할 때마다 단지 수만큼 그 시간을 다시 쓴다. 주소가 같으면 결과도 같으므로
+    # API 응답 캐시에 함께 얹어 둔다.
+    ckey = "geocode|{0}|{1}|{2}".format(name, addr, road_addr)
+    cached = api.cache_get(ckey)
+    if cached is not None:
+        return (cached[0], cached[1]) if cached else (None, None)
+
+    lat, lng = _geocode_uncached(name, addr, road_addr)
+    api.cache_put(ckey, [lat, lng] if lat else [])
+    return lat, lng
+
+
+def _geocode_uncached(name: str, addr: str, road_addr: str = ""):
     region = "{0} {1} {2}".format(
         config.REGION["sido"], config.REGION["sigungu"], config.REGION["dong"])
 
@@ -409,7 +444,13 @@ def main() -> None:
     ap.add_argument("--fee-months", type=int, default=3,
                     help="공용관리비를 거슬러 찾을 개월 수 (항목이 17개라 달마다 17회 호출됨)")
     ap.add_argument("--trade-months", type=int, default=12)
+    ap.add_argument("--refresh", action="store_true",
+                    help="API 응답 캐시를 무시하고 전부 새로 받는다")
     args = ap.parse_args()
+
+    if args.refresh:
+        api.disable_cache()
+        print("■ --refresh : 캐시를 쓰지 않고 새로 받습니다.")
 
     manual = load_manual_coords()
     if manual:
@@ -439,7 +480,13 @@ def main() -> None:
     print("  실거래 {0}건 수집".format(len(trades)))
 
     rows, fee_base_months = [], []
+    started = time.time()
     for i, c in enumerate(complexes, 1):
+        # 단지 하나에 수십 번 호출이 나가므로 '시작'을 먼저 찍어준다.
+        # 그래야 멈춘 것처럼 보이지 않는다.
+        print("  [{0}/{1}] {2} … ".format(i, len(complexes), c["name"]),
+              end="", flush=True)
+        t0 = time.time()
         info = fetch_info(c["kaptCode"])
         m = build_metrics(info)
         fee_total, fee_ym = fetch_common_fee(c["kaptCode"], fee_months)
@@ -474,9 +521,12 @@ def main() -> None:
             },
             "values": aspect_values(m, fee_total),
         })
-        print("  [{0}/{1}] {2}  ({3} / {4})".format(
-            i, len(complexes), name,
-            "좌표O" if lat else "좌표X", "관리비O" if fee_total else "관리비X"))
+        done, elapsed = i, time.time() - started
+        eta = elapsed / done * (len(complexes) - done)
+        print("{0} / {1}  ({2:.1f}s, 남은 예상 {3:.0f}s)".format(
+            "좌표O" if lat else "좌표X", "관리비O" if fee_total else "관리비X",
+            time.time() - t0, eta))
+        api.save_cache()     # 중간에 끊겨도 여기까지 받은 건 다음 실행에서 재사용된다
 
     # ---- 동 내 분포로 사분위 판정 ------------------------------------
     stats = {}
@@ -553,6 +603,7 @@ def main() -> None:
     made = sum(1 for r in rows for c in r["aspects"].values() if c["verdict"] != "none")
     print("\n✔ {0} 생성 — 단지 {1}개 / 장단점 카드 {2}개".format(
         config.BASE_JSON, len(rows), made))
+    api.save_cache()
     report_missing(rows)
 
 

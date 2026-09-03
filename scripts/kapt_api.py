@@ -13,7 +13,9 @@ config.ENDPOINTS 에는 '서비스 주소'까지만 적는다.
 """
 from __future__ import annotations
 
+import json
 import re
+import threading
 import time
 import xml.etree.ElementTree as ET
 from typing import Iterable
@@ -31,6 +33,64 @@ _resolved: dict[str, str] = {}   # 오퍼레이션 키 -> 실제로 동작한 UR
 
 class ApiUnavailable(Exception):
     """후보 엔드포인트가 모두 실패했을 때."""
+
+
+# ---------------------------------------------------------------- 응답 캐시
+# 단지 하나당 관리비 17항목 + 기본/상세 2회를 부르기 때문에, 캐시가 없으면
+# 재실행할 때마다 수백 번을 다시 호출하게 된다. 공공데이터는 월 단위로만 바뀌므로
+# (op, 파라미터) 조합을 그대로 캐시해도 안전하다.
+_cache: dict[str, list] = {}
+_cache_lock = threading.Lock()
+_cache_dirty = False
+_cache_loaded = False
+_use_cache = True
+
+
+def load_cache() -> None:
+    global _cache, _cache_loaded
+    if _cache_loaded:
+        return
+    _cache_loaded = True
+    if config.CACHE_JSON.exists():
+        try:
+            _cache = json.loads(config.CACHE_JSON.read_text(encoding="utf-8"))
+        except Exception:
+            _cache = {}
+
+
+def save_cache() -> None:
+    if not _cache_dirty:
+        return
+    with _cache_lock:
+        try:
+            config.CACHE_JSON.write_text(
+                json.dumps(_cache, ensure_ascii=False), encoding="utf-8")
+        except Exception as exc:
+            print("[안내] 캐시 저장 실패(무시하고 진행): {0}".format(exc))
+
+
+def disable_cache() -> None:
+    """--refresh 로 실행할 때 캐시를 무시하고 전부 새로 받는다."""
+    global _use_cache
+    _use_cache = False
+
+
+def cache_get(key: str):
+    """API 응답 외의 값(지오코딩 결과 등)도 같은 캐시에 얹기 위한 공개 헬퍼."""
+    load_cache()
+    return _cache.get(key)
+
+
+def cache_put(key: str, value) -> None:
+    global _cache_dirty
+    with _cache_lock:
+        _cache[key] = value
+        _cache_dirty = True
+
+
+def _cache_key(op_key: str, params: dict) -> str:
+    parts = sorted((k, str(v)) for k, v in params.items() if k != "serviceKey")
+    return op_key + "|" + "&".join(k + "=" + v for k, v in parts)
 
 
 # ---------------------------------------------------------------- 응답 파싱
@@ -172,6 +232,8 @@ def call(op_key: str, params: dict, quiet: bool = False,
     op_key 에 대응하는 후보 URL 중 처음 성공한 것으로 호출하고 item 리스트를 돌려준다.
     한 번 성공한 URL 은 프로세스 내에서 재사용한다.
     """
+    global _cache_dirty
+
     base_params = {
         "serviceKey": config.KAPT_SERVICE_KEY,
         "_type": "json",
@@ -179,6 +241,13 @@ def call(op_key: str, params: dict, quiet: bool = False,
         "pageNo": 1,
     }
     base_params.update(params)
+
+    ckey = _cache_key(op_key, base_params)
+    if _use_cache:
+        load_cache()
+        hit = _cache.get(ckey)
+        if hit is not None:
+            return hit
 
     urls = [_resolved[op_key]] if op_key in _resolved else \
         list(extra_candidates) + urls_for(op_key)
@@ -190,6 +259,9 @@ def call(op_key: str, params: dict, quiet: bool = False,
             if op_key not in _resolved:
                 print("    · {0} → {1}".format(op_key, url))
             _resolved[op_key] = url
+            with _cache_lock:
+                _cache[ckey] = items
+                _cache_dirty = True
             return items
         except Exception as exc:
             errors.append("  - {0}\n      {1}".format(url, exc))

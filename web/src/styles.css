@@ -130,10 +130,38 @@ button {
   left: 0;
   top: 0;
   transform: translate(-50%, -100%);
+  /* 단지가 촘촘해 이름표끼리 겹친다. 이름표가 클릭을 가로채면 밑에 깔린 마커를
+     아예 누를 수 없으므로, 클릭 판정은 아래 .pin__dot 에만 준다. */
+  pointer-events: none;
+}
+
+.pin-icon .pin__dot {
+  pointer-events: auto;
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(20, 24, 31, 0.45);
 }
 
 .pin-icon .pin.pin--active {
   transform: translate(-50%, -100%) scale(1.12);
+}
+
+/* 점에 마우스를 올리면 그 마커의 이름표를 강조해 어느 단지인지 분명히 보이게 */
+.pin-icon .pin:has(.pin__dot:hover) {
+  background: var(--ink);
+  border-color: var(--ink);
+  box-shadow: 0 3px 12px rgba(20, 24, 31, 0.35);
+}
+
+.pin-icon .pin:has(.pin__dot:hover) .pin__name {
+  color: #fff;
+}
+
+/* 선택된 마커는 항상 다른 마커 위에 */
+.leaflet-marker-icon:has(.pin--active) {
+  z-index: 2000 !important;
 }
 
 .leaflet-container {

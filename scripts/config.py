@@ -20,6 +20,9 @@ WEB_PUBLIC = ROOT / "web" / "public"
 
 BASE_JSON = DATA_DIR / "base.json"            # ① base.py 산출물
 COORDS_JSON = DATA_DIR / "coords.json"        # 좌표 수동 보정 파일 (선택)
+# API 응답 캐시 — 같은 조회를 다시 하지 않게 해서 재실행을 몇 초로 줄인다.
+# 지우거나 --refresh 로 실행하면 새로 받아온다.
+CACHE_JSON = DATA_DIR / ".api_cache.json"
 REVIEWS_RAW_JSON = DATA_DIR / "reviews_raw.json"  # ② collect.py 산출물
 DATA_JSON = DATA_DIR / "data.json"            # ③ summarize.py 산출물 (프론트가 읽는 파일)
 
@@ -53,7 +56,9 @@ for _stream in (sys.stdout, sys.stderr):
 
 
 def env(key: str, default: str | None = None, required: bool = False) -> str | None:
-    val = os.environ.get(key, default)
+    # .env 에 'BJD_CODE=' 처럼 키만 있고 값이 빈 줄이 흔하다. 이때 os.environ 에는
+    # 키가 존재하므로 get() 의 기본값이 적용되지 않는다 — 빈 값은 '없음'으로 본다.
+    val = os.environ.get(key) or default
     if required and not val:
         print(f"[설정 오류] 환경변수 {key} 가 없습니다. .env 파일을 확인하세요.", file=sys.stderr)
         sys.exit(1)

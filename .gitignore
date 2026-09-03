@@ -4,3 +4,5 @@ __pycache__/
 node_modules/
 dist/
 data/reviews_raw.json
+data/.api_cache.json
+data/coords.missing.json

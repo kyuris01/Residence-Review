@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T14:27:36+09:00",
+  "generatedAt": "2026-09-03T14:27:16+09:00",
   "region": {
     "sido": "전남광주통합특별시",
     "sigungu": "나주시",
@@ -119,9 +119,7 @@
     "feeBaseMonth": "202608",
     "tradeWindow": "202509~202608",
     "endpoints": {},
-    "rule": "동 내 단지 분포에서 상위 25%(Q3) 밖이면 장점, 하위 25%(Q1) 밖이면 단점. 중간 50%는 카드를 만들지 않음.",
-    "qual": "Tavily 검색 API(카페·블로그·웹), 유튜브 Data API(댓글)",
-    "llm": null
+    "rule": "동 내 단지 분포에서 상위 25%(Q3) 밖이면 장점, 하위 25%(Q1) 밖이면 단점. 중간 50%는 카드를 만들지 않음."
   },
   "complexes": [
     {
@@ -237,13 +235,6 @@
           "q3": 4.0,
           "median": 3.0
         }
-      },
-      "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
-        "evidence": 0
       }
     },
     {
@@ -359,13 +350,6 @@
           "q3": 4.0,
           "median": 3.0
         }
-      },
-      "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
-        "evidence": 0
       }
     },
     {
@@ -481,13 +465,6 @@
           "q3": 4.0,
           "median": 3.0
         }
-      },
-      "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
-        "evidence": 0
       }
     },
     {
@@ -603,13 +580,6 @@
           "q3": 4.0,
           "median": 3.0
         }
-      },
-      "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
-        "evidence": 0
       }
     },
     {
@@ -725,13 +695,6 @@
           "q3": 4.0,
           "median": 3.0
         }
-      },
-      "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
-        "evidence": 0
       }
     },
     {
@@ -847,13 +810,6 @@
           "q3": 4.0,
           "median": 3.0
         }
-      },
-      "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
-        "evidence": 0
       }
     },
     {
@@ -969,13 +925,6 @@
           "q3": 4.0,
           "median": 3.0
         }
-      },
-      "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
-        "evidence": 0
       }
     },
     {
@@ -1091,13 +1040,6 @@
           "q3": 4.0,
           "median": 3.0
         }
-      },
-      "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
-        "evidence": 0
       }
     },
     {
@@ -1213,13 +1155,6 @@
           "q3": 4.0,
           "median": 3.0
         }
-      },
-      "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
-        "evidence": 0
       }
     },
     {
@@ -1335,13 +1270,6 @@
           "q3": 4.0,
           "median": 3.0
         }
-      },
-      "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
-        "evidence": 0
       }
     },
     {
@@ -1457,13 +1385,6 @@
           "q3": 4.0,
           "median": 3.0
         }
-      },
-      "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
-        "evidence": 0
       }
     },
     {
@@ -1579,13 +1500,6 @@
           "q3": 4.0,
           "median": 3.0
         }
-      },
-      "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
-        "evidence": 0
       }
     },
     {
@@ -1701,13 +1615,6 @@
           "q3": 4.0,
           "median": 3.0
         }
-      },
-      "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
-        "evidence": 0
       }
     },
     {
@@ -1823,13 +1730,6 @@
           "q3": 4.0,
           "median": 3.0
         }
-      },
-      "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
-        "evidence": 0
       }
     },
     {
@@ -1945,13 +1845,6 @@
           "q3": 4.0,
           "median": 3.0
         }
-      },
-      "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
-        "evidence": 0
       }
     },
     {
@@ -2067,13 +1960,6 @@
           "q3": 4.0,
           "median": 3.0
         }
-      },
-      "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
-        "evidence": 0
       }
     },
     {
@@ -2189,13 +2075,6 @@
           "q3": 4.0,
           "median": 3.0
         }
-      },
-      "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
-        "evidence": 0
       }
     },
     {
@@ -2307,13 +2186,6 @@
           "q3": 4.0,
           "median": 3.0
         }
-      },
-      "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
-        "evidence": 0
       }
     },
     {
@@ -2429,23 +2301,7 @@
           "q3": 4.0,
           "median": 3.0
         }
-      },
-      "review": {
-        "collected": 0,
-        "ad": 0,
-        "review": 0,
-        "unrelated": 0,
-        "evidence": 0
       }
     }
-  ],
-  "dongSummary": null,
-  "reviewStats": {
-    "collected": 0,
-    "ad": 0,
-    "review": 0,
-    "unrelated": 0,
-    "evidence": 0
-  },
-  "reviewCollectedAt": null
+  ]
 }

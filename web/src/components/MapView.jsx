@@ -68,6 +68,10 @@ export default function MapView({ complexes, selectedCode, onSelect, center, zoo
         const marker = L.marker([c.lat, c.lng], {
           icon: L.divIcon({ html: el, className: 'pin-icon', iconSize: [0, 0] }),
           keyboard: false,
+          // 빛가람동은 단지가 촘촘해 이름표가 서로 겹친다. 겹친 상태에서는 위에
+          // 깔린 마커가 클릭을 가로채므로, 마우스를 올린 마커를 맨 앞으로 올린다.
+          riseOnHover: true,
+          riseOffset: 1000,
         }).addTo(map)
         pinsRef.current.set(c.kaptCode, el)
         points.push([c.lat, c.lng])
